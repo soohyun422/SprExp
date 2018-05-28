@@ -1,0 +1,302 @@
+WorkerID 	 TimeReceived 	  ParticipantIP 	 Controller 	 Item 	 Element 	 Type 	 Group 	 WordNumber 	 Word 	 ReadingTime 	 Newline 	 Sentence 
+sh	1527014281	3844493edabfb70abfc32cf91462f273	Form	1	0	instructions	NULL	worker_id	sh
+sh	1527014281	3844493edabfb70abfc32cf91462f273	Form	1	0	instructions	NULL	consent	yes
+sh	1527014281	3844493edabfb70abfc32cf91462f273	Form	1	0	instructions	NULL	_REACTION_TIME_	4826
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	4	0	practice1	NULL	1	This	208	False	This is the exercise which the kids who came to the park to learn yoga were thrilled about.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	4	0	practice1	NULL	2	is	192	False	This is the exercise which the kids who came to the park to learn yoga were thrilled about.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	4	0	practice1	NULL	3	the exercise	176	False	This is the exercise which the kids who came to the park to learn yoga were thrilled about.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	4	0	practice1	NULL	4	which	168	False	This is the exercise which the kids who came to the park to learn yoga were thrilled about.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	4	0	practice1	NULL	5	the kids	160	False	This is the exercise which the kids who came to the park to learn yoga were thrilled about.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	4	0	practice1	NULL	6	who	160	False	This is the exercise which the kids who came to the park to learn yoga were thrilled about.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	4	0	practice1	NULL	7	came	160	False	This is the exercise which the kids who came to the park to learn yoga were thrilled about.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	4	0	practice1	NULL	8	to the park	168	False	This is the exercise which the kids who came to the park to learn yoga were thrilled about.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	4	0	practice1	NULL	9	to learn	144	False	This is the exercise which the kids who came to the park to learn yoga were thrilled about.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	4	0	practice1	NULL	10	yoga	120	False	This is the exercise which the kids who came to the park to learn yoga were thrilled about.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	4	0	practice1	NULL	11	were	160	False	This is the exercise which the kids who came to the park to learn yoga were thrilled about.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	4	0	practice1	NULL	12	thrilled about.	384	False	This is the exercise which the kids who came to the park to learn yoga were thrilled about.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	5	0	practice2	NULL	1	Which proposal	160	False	Which proposal did the citizens who signed petitions rejecting fracking end up also opposing?
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	5	0	practice2	NULL	2	did	160	False	Which proposal did the citizens who signed petitions rejecting fracking end up also opposing?
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	5	0	practice2	NULL	3	the citizens	152	False	Which proposal did the citizens who signed petitions rejecting fracking end up also opposing?
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	5	0	practice2	NULL	4	who	154	False	Which proposal did the citizens who signed petitions rejecting fracking end up also opposing?
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	5	0	practice2	NULL	5	signed	174	False	Which proposal did the citizens who signed petitions rejecting fracking end up also opposing?
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	5	0	practice2	NULL	6	petitions	168	False	Which proposal did the citizens who signed petitions rejecting fracking end up also opposing?
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	5	0	practice2	NULL	7	rejecting	162	False	Which proposal did the citizens who signed petitions rejecting fracking end up also opposing?
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	5	0	practice2	NULL	8	fracking	158	False	Which proposal did the citizens who signed petitions rejecting fracking end up also opposing?
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	5	0	practice2	NULL	9	end up	160	False	Which proposal did the citizens who signed petitions rejecting fracking end up also opposing?
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	5	0	practice2	NULL	10	also opposing?	200	False	Which proposal did the citizens who signed petitions rejecting fracking end up also opposing?
+sh	1527014281	3844493edabfb70abfc32cf91462f273	Question	5	1	practice2	NULL	[Comprehension Question]: Did the citizens oppose the petitions against fracking?	No	1	5990
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	6	0	practice3	NULL	1	This	191	False	This is the last practice sentence before the experiment begins.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	6	0	practice3	NULL	2	is	193	False	This is the last practice sentence before the experiment begins.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	6	0	practice3	NULL	3	the	167	False	This is the last practice sentence before the experiment begins.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	6	0	practice3	NULL	4	last	176	False	This is the last practice sentence before the experiment begins.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	6	0	practice3	NULL	5	practice	192	False	This is the last practice sentence before the experiment begins.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	6	0	practice3	NULL	6	sentence	200	False	This is the last practice sentence before the experiment begins.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	6	0	practice3	NULL	7	before	216	False	This is the last practice sentence before the experiment begins.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	6	0	practice3	NULL	8	the	176	False	This is the last practice sentence before the experiment begins.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	6	0	practice3	NULL	9	experiment	257	False	This is the last practice sentence before the experiment begins.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	6	0	practice3	NULL	10	begins.	360	False	This is the last practice sentence before the experiment begins.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	Form	2	0	begin	NULL	_REACTION_TIME_	2687
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	22	0	block6-LL-List3	NULL	1	He	184	False	He refused to dismiss the principal for such misbehavior.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	22	0	block6-LL-List3	NULL	2	refused	152	False	He refused to dismiss the principal for such misbehavior.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	22	0	block6-LL-List3	NULL	3	to	489	False	He refused to dismiss the principal for such misbehavior.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	22	0	block6-LL-List3	NULL	4	dismiss	33	False	He refused to dismiss the principal for such misbehavior.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	22	0	block6-LL-List3	NULL	5	the principal	41	False	He refused to dismiss the principal for such misbehavior.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	22	0	block6-LL-List3	NULL	6	for	25	False	He refused to dismiss the principal for such misbehavior.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	22	0	block6-LL-List3	NULL	7	such misbehavior.	33	False	He refused to dismiss the principal for such misbehavior.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	24	0	block6-fillerQ-List3	NULL	1	We	152	False	We purchased a poetry book for our class.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	24	0	block6-fillerQ-List3	NULL	2	purchased	160	False	We purchased a poetry book for our class.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	24	0	block6-fillerQ-List3	NULL	3	a poetry	168	False	We purchased a poetry book for our class.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	24	0	block6-fillerQ-List3	NULL	4	book	368	False	We purchased a poetry book for our class.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	24	0	block6-fillerQ-List3	NULL	5	for	320	False	We purchased a poetry book for our class.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	24	0	block6-fillerQ-List3	NULL	6	our	273	False	We purchased a poetry book for our class.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	24	0	block6-fillerQ-List3	NULL	7	class.	295	False	We purchased a poetry book for our class.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	Question	24	1	block6-fillerQ-List3	NULL	We are likely students of civil engineering.	False	1	2822
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	23	0	block6-filler-List3	NULL	1	He	192	False	He violated a traffic light while driving on the highway.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	23	0	block6-filler-List3	NULL	2	violated	168	False	He violated a traffic light while driving on the highway.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	23	0	block6-filler-List3	NULL	3	a traffic light	328	False	He violated a traffic light while driving on the highway.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	23	0	block6-filler-List3	NULL	4	while	296	False	He violated a traffic light while driving on the highway.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	23	0	block6-filler-List3	NULL	5	driving	232	False	He violated a traffic light while driving on the highway.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	23	0	block6-filler-List3	NULL	6	on	265	False	He violated a traffic light while driving on the highway.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	23	0	block6-filler-List3	NULL	7	the highway.	239	False	He violated a traffic light while driving on the highway.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	28	0	block8-HL-List3	NULL	1	She	176	False	She agrees to arrest the crook after three weeks.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	28	0	block8-HL-List3	NULL	2	agrees	304	False	She agrees to arrest the crook after three weeks.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	28	0	block8-HL-List3	NULL	3	to	232	False	She agrees to arrest the crook after three weeks.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	28	0	block8-HL-List3	NULL	4	arrest	200	False	She agrees to arrest the crook after three weeks.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	28	0	block8-HL-List3	NULL	5	the crook	320	False	She agrees to arrest the crook after three weeks.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	28	0	block8-HL-List3	NULL	6	after	360	False	She agrees to arrest the crook after three weeks.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	28	0	block8-HL-List3	NULL	7	three weeks.	364	False	She agrees to arrest the crook after three weeks.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	30	0	block8-fillerQ-List3	NULL	1	Mia	248	False	Mia received about a thousand text messages per day.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	30	0	block8-fillerQ-List3	NULL	2	received	240	False	Mia received about a thousand text messages per day.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	30	0	block8-fillerQ-List3	NULL	3	about	376	False	Mia received about a thousand text messages per day.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	30	0	block8-fillerQ-List3	NULL	4	a thousand	464	False	Mia received about a thousand text messages per day.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	30	0	block8-fillerQ-List3	NULL	5	text	375	False	Mia received about a thousand text messages per day.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	30	0	block8-fillerQ-List3	NULL	6	messages	329	False	Mia received about a thousand text messages per day.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	30	0	block8-fillerQ-List3	NULL	7	per day.	352	False	Mia received about a thousand text messages per day.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	Question	30	1	block8-fillerQ-List3	NULL	Nobody in the world knows Mia's phone number.	False	1	1655
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	29	0	block8-filler-List3	NULL	1	We	208	False	We indicted them for multiple trespassing yesterday.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	29	0	block8-filler-List3	NULL	2	indicted	177	False	We indicted them for multiple trespassing yesterday.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	29	0	block8-filler-List3	NULL	3	them	158	False	We indicted them for multiple trespassing yesterday.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	29	0	block8-filler-List3	NULL	4	for	184	False	We indicted them for multiple trespassing yesterday.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	29	0	block8-filler-List3	NULL	5	multiple	185	False	We indicted them for multiple trespassing yesterday.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	29	0	block8-filler-List3	NULL	6	trespassing	175	False	We indicted them for multiple trespassing yesterday.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	29	0	block8-filler-List3	NULL	7	yesterday.	193	False	We indicted them for multiple trespassing yesterday.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	8	0	block1-filler-List3	NULL	1	They	192	False	They are supposed to cancel the appointment this weekend.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	8	0	block1-filler-List3	NULL	2	are	169	False	They are supposed to cancel the appointment this weekend.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	8	0	block1-filler-List3	NULL	3	supposed	192	False	They are supposed to cancel the appointment this weekend.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	8	0	block1-filler-List3	NULL	4	to	200	False	They are supposed to cancel the appointment this weekend.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	8	0	block1-filler-List3	NULL	5	cancel	160	False	They are supposed to cancel the appointment this weekend.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	8	0	block1-filler-List3	NULL	6	the appointment	176	False	They are supposed to cancel the appointment this weekend.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	8	0	block1-filler-List3	NULL	7	this weekend.	184	False	They are supposed to cancel the appointment this weekend.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	9	0	block1-fillerQ-List3	NULL	1	Elizabeth	176	False	Elizabeth hated her geology professor in college.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	9	0	block1-fillerQ-List3	NULL	2	hated	192	False	Elizabeth hated her geology professor in college.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	9	0	block1-fillerQ-List3	NULL	3	her	192	False	Elizabeth hated her geology professor in college.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	9	0	block1-fillerQ-List3	NULL	4	geology	183	False	Elizabeth hated her geology professor in college.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	9	0	block1-fillerQ-List3	NULL	5	professor	185	False	Elizabeth hated her geology professor in college.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	9	0	block1-fillerQ-List3	NULL	6	in	192	False	Elizabeth hated her geology professor in college.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	9	0	block1-fillerQ-List3	NULL	7	college.	369	False	Elizabeth hated her geology professor in college.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	Question	9	1	block1-fillerQ-List3	NULL	Elizabeth has fond memories of her college geology instructor.	False	1	5356
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	7	0	block1-LH-List3	NULL	1	They	159	False	They tried to choose the customer before this summer.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	7	0	block1-LH-List3	NULL	2	tried	169	False	They tried to choose the customer before this summer.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	7	0	block1-LH-List3	NULL	3	to	176	False	They tried to choose the customer before this summer.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	7	0	block1-LH-List3	NULL	4	choose	168	False	They tried to choose the customer before this summer.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	7	0	block1-LH-List3	NULL	5	the customer	176	False	They tried to choose the customer before this summer.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	7	0	block1-LH-List3	NULL	6	before	167	False	They tried to choose the customer before this summer.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	7	0	block1-LH-List3	NULL	7	this summer.	401	False	They tried to choose the customer before this summer.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	19	0	block5-LH-List3	NULL	1	We	200	False	We have to search the mother for the evidence.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	19	0	block5-LH-List3	NULL	2	have	176	False	We have to search the mother for the evidence.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	19	0	block5-LH-List3	NULL	3	to	193	False	We have to search the mother for the evidence.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	19	0	block5-LH-List3	NULL	4	search	192	False	We have to search the mother for the evidence.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	19	0	block5-LH-List3	NULL	5	the mother	191	False	We have to search the mother for the evidence.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	19	0	block5-LH-List3	NULL	6	for	193	False	We have to search the mother for the evidence.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	19	0	block5-LH-List3	NULL	7	the evidence.	439	False	We have to search the mother for the evidence.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	21	0	block5-fillerQ-List3	NULL	1	They	184	False	They went to the store to buy more cereal.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	21	0	block5-fillerQ-List3	NULL	2	went	192	False	They went to the store to buy more cereal.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	21	0	block5-fillerQ-List3	NULL	3	to	192	False	They went to the store to buy more cereal.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	21	0	block5-fillerQ-List3	NULL	4	the store	401	False	They went to the store to buy more cereal.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	21	0	block5-fillerQ-List3	NULL	5	to	295	False	They went to the store to buy more cereal.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	21	0	block5-fillerQ-List3	NULL	6	buy	296	False	They went to the store to buy more cereal.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	21	0	block5-fillerQ-List3	NULL	7	more cereal.	545	False	They went to the store to buy more cereal.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	Question	21	1	block5-fillerQ-List3	NULL	There was not enough cereal at their place.	True	1	2055
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	20	0	block5-filler-List3	NULL	1	He	169	False	He allowed his daughter to visit her friend.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	20	0	block5-filler-List3	NULL	2	allowed	168	False	He allowed his daughter to visit her friend.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	20	0	block5-filler-List3	NULL	3	his daughter	168	False	He allowed his daughter to visit her friend.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	20	0	block5-filler-List3	NULL	4	to	391	False	He allowed his daughter to visit her friend.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	20	0	block5-filler-List3	NULL	5	visit	345	False	He allowed his daughter to visit her friend.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	20	0	block5-filler-List3	NULL	6	her	328	False	He allowed his daughter to visit her friend.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	20	0	block5-filler-List3	NULL	7	friend.	327	False	He allowed his daughter to visit her friend.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	35	0	block10-filler-List3	NULL	1	She	177	False	She got disappointed that the parade was canceled.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	35	0	block10-filler-List3	NULL	2	got	210	False	She got disappointed that the parade was canceled.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	35	0	block10-filler-List3	NULL	3	disappointed	246	False	She got disappointed that the parade was canceled.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	35	0	block10-filler-List3	NULL	4	that	296	False	She got disappointed that the parade was canceled.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	35	0	block10-filler-List3	NULL	5	the parade	256	False	She got disappointed that the parade was canceled.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	35	0	block10-filler-List3	NULL	6	was	392	False	She got disappointed that the parade was canceled.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	35	0	block10-filler-List3	NULL	7	canceled.	279	False	She got disappointed that the parade was canceled.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	36	0	block10-fillerQ-List3	NULL	1	They	184	False	They devoured a bar of cheese in the restaurant.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	36	0	block10-fillerQ-List3	NULL	2	devoured	313	False	They devoured a bar of cheese in the restaurant.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	36	0	block10-fillerQ-List3	NULL	3	a bar	303	False	They devoured a bar of cheese in the restaurant.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	36	0	block10-fillerQ-List3	NULL	4	of	313	False	They devoured a bar of cheese in the restaurant.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	36	0	block10-fillerQ-List3	NULL	5	cheese	224	False	They devoured a bar of cheese in the restaurant.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	36	0	block10-fillerQ-List3	NULL	6	in	183	False	They devoured a bar of cheese in the restaurant.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	36	0	block10-fillerQ-List3	NULL	7	the restaurant.	305	False	They devoured a bar of cheese in the restaurant.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	Question	36	1	block10-fillerQ-List3	NULL	They probably are lactose intolerant.	True	0	1614
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	34	0	block10-LL-List3	NULL	1	He	183	False	He needs to show the salesman during the holidays.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	34	0	block10-LL-List3	NULL	2	needs	288	False	He needs to show the salesman during the holidays.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	34	0	block10-LL-List3	NULL	3	to	224	False	He needs to show the salesman during the holidays.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	34	0	block10-LL-List3	NULL	4	show	217	False	He needs to show the salesman during the holidays.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	34	0	block10-LL-List3	NULL	5	the salesman	215	False	He needs to show the salesman during the holidays.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	34	0	block10-LL-List3	NULL	6	during	233	False	He needs to show the salesman during the holidays.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	34	0	block10-LL-List3	NULL	7	the holidays.	416	False	He needs to show the salesman during the holidays.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	31	0	block9-LH-List3	NULL	1	They	217	False	They failed to tow the man during the storm.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	31	0	block9-LH-List3	NULL	2	failed	240	False	They failed to tow the man during the storm.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	31	0	block9-LH-List3	NULL	3	to	207	False	They failed to tow the man during the storm.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	31	0	block9-LH-List3	NULL	4	tow	240	False	They failed to tow the man during the storm.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	31	0	block9-LH-List3	NULL	5	the man	225	False	They failed to tow the man during the storm.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	31	0	block9-LH-List3	NULL	6	during	240	False	They failed to tow the man during the storm.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	31	0	block9-LH-List3	NULL	7	the storm.	400	False	They failed to tow the man during the storm.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	33	0	block9-fillerQ-List3	NULL	1	Someone	256	False	Someone hit a car with her scooter yesterday.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	33	0	block9-fillerQ-List3	NULL	2	hit	256	False	Someone hit a car with her scooter yesterday.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	33	0	block9-fillerQ-List3	NULL	3	a car	225	False	Someone hit a car with her scooter yesterday.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	33	0	block9-fillerQ-List3	NULL	4	with	247	False	Someone hit a car with her scooter yesterday.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	33	0	block9-fillerQ-List3	NULL	5	her	224	False	Someone hit a car with her scooter yesterday.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	33	0	block9-fillerQ-List3	NULL	6	scooter	217	False	Someone hit a car with her scooter yesterday.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	33	0	block9-fillerQ-List3	NULL	7	yesterday.	224	False	Someone hit a car with her scooter yesterday.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	Question	33	1	block9-fillerQ-List3	NULL	Someone probably lost control of her vehicle.	True	1	1943
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	32	0	block9-filler-List3	NULL	1	We	176	False	We went on strike after trying to negotiate.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	32	0	block9-filler-List3	NULL	2	went on	329	False	We went on strike after trying to negotiate.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	32	0	block9-filler-List3	NULL	3	strike	256	False	We went on strike after trying to negotiate.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	32	0	block9-filler-List3	NULL	4	after	247	False	We went on strike after trying to negotiate.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	32	0	block9-filler-List3	NULL	5	trying	233	False	We went on strike after trying to negotiate.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	32	0	block9-filler-List3	NULL	6	to	416	False	We went on strike after trying to negotiate.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	32	0	block9-filler-List3	NULL	7	negotiate.	351	False	We went on strike after trying to negotiate.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	42	0	block12-fillerQ-List3	NULL	1	He	175	False	He finally found a publisher for his latest book.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	42	0	block12-fillerQ-List3	NULL	2	finally	184	False	He finally found a publisher for his latest book.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	42	0	block12-fillerQ-List3	NULL	3	found	193	False	He finally found a publisher for his latest book.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	42	0	block12-fillerQ-List3	NULL	4	a publisher	184	False	He finally found a publisher for his latest book.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	42	0	block12-fillerQ-List3	NULL	5	for	192	False	He finally found a publisher for his latest book.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	42	0	block12-fillerQ-List3	NULL	6	his	456	False	He finally found a publisher for his latest book.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	42	0	block12-fillerQ-List3	NULL	7	latest book.	543	False	He finally found a publisher for his latest book.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	Question	42	1	block12-fillerQ-List3	NULL	He has written a book%2C but it is not currently published.	True	1	3067
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	40	0	block12-HL-List3	NULL	1	We	177	False	We intend to select the contestant after the workshop.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	40	0	block12-HL-List3	NULL	2	intend	159	False	We intend to select the contestant after the workshop.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	40	0	block12-HL-List3	NULL	3	to	200	False	We intend to select the contestant after the workshop.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	40	0	block12-HL-List3	NULL	4	select	185	False	We intend to select the contestant after the workshop.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	40	0	block12-HL-List3	NULL	5	the contestant	183	False	We intend to select the contestant after the workshop.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	40	0	block12-HL-List3	NULL	6	after	193	False	We intend to select the contestant after the workshop.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	40	0	block12-HL-List3	NULL	7	the workshop.	536	False	We intend to select the contestant after the workshop.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	41	0	block12-filler-List3	NULL	1	She	176	False	She should reschedule the interview for her sister's wedding.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	41	0	block12-filler-List3	NULL	2	should	192	False	She should reschedule the interview for her sister's wedding.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	41	0	block12-filler-List3	NULL	3	reschedule	201	False	She should reschedule the interview for her sister's wedding.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	41	0	block12-filler-List3	NULL	4	the interview	223	False	She should reschedule the interview for her sister's wedding.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	41	0	block12-filler-List3	NULL	5	for	809	False	She should reschedule the interview for her sister's wedding.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	41	0	block12-filler-List3	NULL	6	her sister's	344	False	She should reschedule the interview for her sister's wedding.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	41	0	block12-filler-List3	NULL	7	wedding.	415	False	She should reschedule the interview for her sister's wedding.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	26	0	block7-filler-List3	NULL	1	We	175	False	We persuade the patients to quit drinking alcohol.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	26	0	block7-filler-List3	NULL	2	persuade	201	False	We persuade the patients to quit drinking alcohol.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	26	0	block7-filler-List3	NULL	3	the patients	408	False	We persuade the patients to quit drinking alcohol.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	26	0	block7-filler-List3	NULL	4	to	359	False	We persuade the patients to quit drinking alcohol.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	26	0	block7-filler-List3	NULL	5	quit	313	False	We persuade the patients to quit drinking alcohol.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	26	0	block7-filler-List3	NULL	6	drinking	336	False	We persuade the patients to quit drinking alcohol.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	26	0	block7-filler-List3	NULL	7	alcohol.	384	False	We persuade the patients to quit drinking alcohol.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	27	0	block7-fillerQ-List3	NULL	1	Her	168	False	Her teenage sister developed an app for banking.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	27	0	block7-fillerQ-List3	NULL	2	teenage	327	False	Her teenage sister developed an app for banking.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	27	0	block7-fillerQ-List3	NULL	3	sister	320	False	Her teenage sister developed an app for banking.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	27	0	block7-fillerQ-List3	NULL	4	developed	312	False	Her teenage sister developed an app for banking.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	27	0	block7-fillerQ-List3	NULL	5	an app	504	False	Her teenage sister developed an app for banking.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	27	0	block7-fillerQ-List3	NULL	6	for	312	False	Her teenage sister developed an app for banking.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	27	0	block7-fillerQ-List3	NULL	7	banking.	385	False	Her teenage sister developed an app for banking.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	Question	27	1	block7-fillerQ-List3	NULL	Her sister probably knows very little about software.	False	1	2159
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	25	0	block7-HH-List3	NULL	1	We	208	False	We began to punish the child despite the opposition.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	25	0	block7-HH-List3	NULL	2	began	280	False	We began to punish the child despite the opposition.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	25	0	block7-HH-List3	NULL	3	to	272	False	We began to punish the child despite the opposition.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	25	0	block7-HH-List3	NULL	4	punish	232	False	We began to punish the child despite the opposition.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	25	0	block7-HH-List3	NULL	5	the child	273	False	We began to punish the child despite the opposition.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	25	0	block7-HH-List3	NULL	6	despite	447	False	We began to punish the child despite the opposition.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	25	0	block7-HH-List3	NULL	7	the opposition.	497	False	We began to punish the child despite the opposition.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	11	0	block2-filler-List3	NULL	1	They	239	False	They admit that the system broke down yesterday.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	11	0	block2-filler-List3	NULL	2	admit	224	False	They admit that the system broke down yesterday.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	11	0	block2-filler-List3	NULL	3	that	320	False	They admit that the system broke down yesterday.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	11	0	block2-filler-List3	NULL	4	the system	272	False	They admit that the system broke down yesterday.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	11	0	block2-filler-List3	NULL	5	broke	408	False	They admit that the system broke down yesterday.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	11	0	block2-filler-List3	NULL	6	down	329	False	They admit that the system broke down yesterday.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	11	0	block2-filler-List3	NULL	7	yesterday.	320	False	They admit that the system broke down yesterday.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	12	0	block2-fillerQ-List3	NULL	1	I	169	False	I played the guitar in a rock band twenty years ago.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	12	0	block2-fillerQ-List3	NULL	2	played	303	False	I played the guitar in a rock band twenty years ago.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	12	0	block2-fillerQ-List3	NULL	3	the guitar	297	False	I played the guitar in a rock band twenty years ago.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	12	0	block2-fillerQ-List3	NULL	4	in	263	False	I played the guitar in a rock band twenty years ago.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	12	0	block2-fillerQ-List3	NULL	5	a rock band	248	False	I played the guitar in a rock band twenty years ago.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	12	0	block2-fillerQ-List3	NULL	6	twenty years	472	False	I played the guitar in a rock band twenty years ago.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	12	0	block2-fillerQ-List3	NULL	7	ago.	497	False	I played the guitar in a rock band twenty years ago.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	Question	12	1	block2-fillerQ-List3	NULL	The musical instrument of choice had strings	True	1	1781
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	10	0	block2-LL-List3	NULL	1	He	200	False	He loves to record the scientist while walking around.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	10	0	block2-LL-List3	NULL	2	loves	193	False	He loves to record the scientist while walking around.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	10	0	block2-LL-List3	NULL	3	to	200	False	He loves to record the scientist while walking around.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	10	0	block2-LL-List3	NULL	4	record	279	False	He loves to record the scientist while walking around.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	10	0	block2-LL-List3	NULL	5	the scientist	256	False	He loves to record the scientist while walking around.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	10	0	block2-LL-List3	NULL	6	while	272	False	He loves to record the scientist while walking around.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	10	0	block2-LL-List3	NULL	7	walking around.	625	False	He loves to record the scientist while walking around.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	15	0	block3-fillerQ-List3	NULL	1	He	159	False	He luckily got a job at an elementary school.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	15	0	block3-fillerQ-List3	NULL	2	luckily	248	False	He luckily got a job at an elementary school.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	15	0	block3-fillerQ-List3	NULL	3	got	208	False	He luckily got a job at an elementary school.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	15	0	block3-fillerQ-List3	NULL	4	a job	272	False	He luckily got a job at an elementary school.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	15	0	block3-fillerQ-List3	NULL	5	at	224	False	He luckily got a job at an elementary school.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	15	0	block3-fillerQ-List3	NULL	6	an elementary	217	False	He luckily got a job at an elementary school.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	15	0	block3-fillerQ-List3	NULL	7	school.	359	False	He luckily got a job at an elementary school.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	Question	15	1	block3-fillerQ-List3	NULL	Is it not likely that there will be children at his new workplace.	False	1	8982
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	13	0	block3-HH-List3	NULL	1	She	231	False	She wants to accuse the criminal of vandalism.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	13	0	block3-HH-List3	NULL	2	wants	224	False	She wants to accuse the criminal of vandalism.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	13	0	block3-HH-List3	NULL	3	to	208	False	She wants to accuse the criminal of vandalism.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	13	0	block3-HH-List3	NULL	4	accuse	225	False	She wants to accuse the criminal of vandalism.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	13	0	block3-HH-List3	NULL	5	the criminal	199	False	She wants to accuse the criminal of vandalism.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	13	0	block3-HH-List3	NULL	6	of	209	False	She wants to accuse the criminal of vandalism.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	13	0	block3-HH-List3	NULL	7	vandalism.	207	False	She wants to accuse the criminal of vandalism.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	14	0	block3-filler-List3	NULL	1	They	167	False	They should invite numerous researchers from Tokyo.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	14	0	block3-filler-List3	NULL	2	should	192	False	They should invite numerous researchers from Tokyo.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	14	0	block3-filler-List3	NULL	3	invite	184	False	They should invite numerous researchers from Tokyo.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	14	0	block3-filler-List3	NULL	4	numerous	200	False	They should invite numerous researchers from Tokyo.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	14	0	block3-filler-List3	NULL	5	researchers	208	False	They should invite numerous researchers from Tokyo.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	14	0	block3-filler-List3	NULL	6	from	209	False	They should invite numerous researchers from Tokyo.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	14	0	block3-filler-List3	NULL	7	Tokyo.	199	False	They should invite numerous researchers from Tokyo.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	17	0	block4-filler-List3	NULL	1	He	176	False	He is expected to resign from the position next year.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	17	0	block4-filler-List3	NULL	2	is expected	184	False	He is expected to resign from the position next year.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	17	0	block4-filler-List3	NULL	3	to	384	False	He is expected to resign from the position next year.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	17	0	block4-filler-List3	NULL	4	resign	217	False	He is expected to resign from the position next year.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	17	0	block4-filler-List3	NULL	5	from	343	False	He is expected to resign from the position next year.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	17	0	block4-filler-List3	NULL	6	the position	360	False	He is expected to resign from the position next year.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	17	0	block4-filler-List3	NULL	7	next year.	360	False	He is expected to resign from the position next year.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	18	0	block4-fillerQ-List3	NULL	1	Courtney	183	False	Courtney showed that her employer was negligent.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	18	0	block4-fillerQ-List3	NULL	2	showed	369	False	Courtney showed that her employer was negligent.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	18	0	block4-fillerQ-List3	NULL	3	that	271	False	Courtney showed that her employer was negligent.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	18	0	block4-fillerQ-List3	NULL	4	her	224	False	Courtney showed that her employer was negligent.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	18	0	block4-fillerQ-List3	NULL	5	employer	312	False	Courtney showed that her employer was negligent.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	18	0	block4-fillerQ-List3	NULL	6	was	296	False	Courtney showed that her employer was negligent.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	18	0	block4-fillerQ-List3	NULL	7	negligent.	433	False	Courtney showed that her employer was negligent.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	Question	18	1	block4-fillerQ-List3	NULL	The company that Courtney works for could be sued.	True	1	1126
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	16	0	block4-HL-List3	NULL	1	They	192	False	They ask to torture the slave during the weekend.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	16	0	block4-HL-List3	NULL	2	ask	216	False	They ask to torture the slave during the weekend.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	16	0	block4-HL-List3	NULL	3	to	224	False	They ask to torture the slave during the weekend.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	16	0	block4-HL-List3	NULL	4	torture	192	False	They ask to torture the slave during the weekend.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	16	0	block4-HL-List3	NULL	5	the slave	193	False	They ask to torture the slave during the weekend.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	16	0	block4-HL-List3	NULL	6	during	399	False	They ask to torture the slave during the weekend.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	16	0	block4-HL-List3	NULL	7	the weekend.	337	False	They ask to torture the slave during the weekend.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	39	0	block11-fillerQ-List3	NULL	1	They	152	False	They are printing many copies of the memo.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	39	0	block11-fillerQ-List3	NULL	2	are	201	False	They are printing many copies of the memo.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	39	0	block11-fillerQ-List3	NULL	3	printing	167	False	They are printing many copies of the memo.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	39	0	block11-fillerQ-List3	NULL	4	many	352	False	They are printing many copies of the memo.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	39	0	block11-fillerQ-List3	NULL	5	copies	313	False	They are printing many copies of the memo.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	39	0	block11-fillerQ-List3	NULL	6	of	264	False	They are printing many copies of the memo.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	39	0	block11-fillerQ-List3	NULL	7	the memo.	320	False	They are printing many copies of the memo.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	Question	39	1	block11-fillerQ-List3	NULL	They likely know how to operate a xerox machine.	True	1	1926
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	38	0	block11-filler-List3	NULL	1	She	249	False	She read the book to her grandmother in the hospital.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	38	0	block11-filler-List3	NULL	2	read	256	False	She read the book to her grandmother in the hospital.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	38	0	block11-filler-List3	NULL	3	the book	207	False	She read the book to her grandmother in the hospital.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	38	0	block11-filler-List3	NULL	4	to	368	False	She read the book to her grandmother in the hospital.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	38	0	block11-filler-List3	NULL	5	her grandmother	313	False	She read the book to her grandmother in the hospital.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	38	0	block11-filler-List3	NULL	6	in	392	False	She read the book to her grandmother in the hospital.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	38	0	block11-filler-List3	NULL	7	the hospital.	471	False	She read the book to her grandmother in the hospital.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	37	0	block11-HH-List3	NULL	1	She	248	False	She strives to rescue the child while driving.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	37	0	block11-HH-List3	NULL	2	strives	575	False	She strives to rescue the child while driving.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	37	0	block11-HH-List3	NULL	3	to	281	False	She strives to rescue the child while driving.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	37	0	block11-HH-List3	NULL	4	rescue	224	False	She strives to rescue the child while driving.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	37	0	block11-HH-List3	NULL	5	the child	543	False	She strives to rescue the child while driving.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	37	0	block11-HH-List3	NULL	6	while	417	False	She strives to rescue the child while driving.
+sh	1527014281	3844493edabfb70abfc32cf91462f273	DashedSentence	37	0	block11-HH-List3	NULL	7	driving.	432	False	She strives to rescue the child while driving.

@@ -3,7 +3,7 @@
 Important things to note about the R file:
 
 1. R does not really have a way to comment out blocks of code, so I'm using 
-   if (FALSE) { ...} 
+   "if (FALSE) { ...}" to achieve that effec.
    When we run the actual data, these commented blocks need to be allowed to run.
    
 2. Each participant has his/her peculiar reading time as a function of caracter length, and so

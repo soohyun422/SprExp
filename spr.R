@@ -1,4 +1,4 @@
-### Good tutorial: https://www.hlp.rochester.edu/resources/BCS152-Tutorial/SPRAnalysisResults.html
+
 
 rm(list=ls())
 library(languageR)

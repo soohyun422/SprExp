@@ -923,12 +923,66 @@ right.HH.reg3
 ####
 ###########################################################
 
-
+# Overall (HL is higher then others, and others are equal)
 
 attach(reg3)
 lmer.reg3 <- lmer(ResRT ~ Condition + (1|WorkerID) + (1|Item) + (1|List), data=reg3)
 summary(lmer.reg3)
 detach(reg3)
+
+
+
+# ===============================
+# By pair: LL vs HL not different (but almost!)
+
+lookintoReg3 <- reg3[which(reg3$Condition == "LL" | reg3$Condition == "HL" ),]
+
+attach(lookintoReg3)
+lmer.LL.HLreg3 <- lmer(ResRT ~ Condition + (1|WorkerID) + (1|Item) + (1|List), data=lookintoReg3)
+summary(lmer.LL.HLreg3)
+detach(lookintoReg3)
+
+# =============================== 
+# By pair: LH vs HL not different
+
+lookintoReg3 <- reg3[which(reg3$Condition == "LH" | reg3$Condition == "HL" ),]
+
+attach(lookintoReg3)
+lmer.LL.HLreg3 <- lmer(ResRT ~ Condition + (1|WorkerID) + (1|Item) + (1|List), data=lookintoReg3)
+summary(lmer.LL.HLreg3)
+detach(lookintoReg3)
+
+# =============================== 
+# By pair: HH vs HL are different
+
+lookintoReg3 <- reg3[which(reg3$Condition == "HH" | reg3$Condition == "HL" ),]
+
+attach(lookintoReg3)
+lmer.LL.HLreg3 <- lmer(ResRT ~ Condition + (1|WorkerID) + (1|Item) + (1|List), data=lookintoReg3)
+summary(lmer.LL.HLreg3)
+detach(lookintoReg3)
+
+# =============================== 
+# By pair: LL vs LH are not different
+
+lookintoReg3 <- reg3[which(reg3$Condition == "LL" | reg3$Condition == "LH" ),]
+
+attach(lookintoReg3)
+lmer.LL.HLreg3 <- lmer(ResRT ~ Condition + (1|WorkerID) + (1|Item) + (1|List), data=lookintoReg3)
+summary(lmer.LL.HLreg3)
+detach(lookintoReg3)
+
+# =============================== 
+# By pair: HH vs LH are not different
+
+lookintoReg3 <- reg3[which(reg3$Condition == "HH" | reg3$Condition == "LH" ),]
+
+attach(lookintoReg3)
+lmer.LL.HLreg3 <- lmer(ResRT ~ Condition + (1|WorkerID) + (1|Item) + (1|List), data=lookintoReg3)
+summary(lmer.LL.HLreg3)
+detach(lookintoReg3)
+
+
 
 
 #####
@@ -1349,6 +1403,7 @@ sd.HH.reg6
 
 
 
+
 ###########################################################
 ####
 ####  95% Confidence Interval Calculation
@@ -1433,12 +1488,63 @@ right.HH.reg6
 ####
 ###########################################################
 
-
+# Overall (HL is higher then others, and others are equal)
 
 attach(reg6)
 lmer.reg6 <- lmer(ResRT ~ Condition + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
 summary(lmer.reg6)
 detach(reg6)
+
+# ===============================
+# By pair: LL vs HL not different
+
+lookintoReg6 <- reg6[which(reg6$Condition == "LL" | reg6$Condition == "HL" ),]
+
+attach(lookintoReg6)
+lmer.LL.HLreg6 <- lmer(ResRT ~ Condition + (1|WorkerID) + (1|Item) + (1|List), data=lookintoReg6)
+summary(lmer.LL.HLreg6)
+detach(lookintoReg6)
+
+# =============================== 
+# By pair: LH vs HL not different
+
+lookintoReg6 <- reg6[which(reg6$Condition == "LH" | reg6$Condition == "HL" ),]
+
+attach(lookintoReg6)
+lmer.LL.HLreg6 <- lmer(ResRT ~ Condition + (1|WorkerID) + (1|Item) + (1|List), data=lookintoReg6)
+summary(lmer.LL.HLreg6)
+detach(lookintoReg6)
+
+# =============================== 
+# By pair: HH vs HL are different
+
+lookintoReg6 <- reg6[which(reg6$Condition == "HH" | reg6$Condition == "HL" ),]
+
+attach(lookintoReg6)
+lmer.LL.HLreg6 <- lmer(ResRT ~ Condition + (1|WorkerID) + (1|Item) + (1|List), data=lookintoReg6)
+summary(lmer.LL.HLreg6)
+detach(lookintoReg6)
+
+# =============================== 
+# By pair: LL vs LH are not different
+
+lookintoReg6 <- reg6[which(reg6$Condition == "LL" | reg6$Condition == "LH" ),]
+
+attach(lookintoReg6)
+lmer.LL.HLreg6 <- lmer(ResRT ~ Condition + (1|WorkerID) + (1|Item) + (1|List), data=lookintoReg6)
+summary(lmer.LL.HLreg6)
+detach(lookintoReg6)
+
+# =============================== 
+# By pair: HH vs LH are not different
+
+lookintoReg6 <- reg6[which(reg6$Condition == "HH" | reg6$Condition == "LH" ),]
+
+attach(lookintoReg6)
+lmer.LL.HLreg6 <- lmer(ResRT ~ Condition + (1|WorkerID) + (1|Item) + (1|List), data=lookintoReg6)
+summary(lmer.LL.HLreg6)
+detach(lookintoReg6)
+
 
 
 #####

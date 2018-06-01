@@ -1,12 +1,6 @@
 # SprExp
 
-Reg1: HH = HL, LH, LL
-Reg2: HH = HL, LH, LL
-Reg3: HH = LH, LL, but != HL    
-Reg4: HH = HL, LH, LL
-Reg5: HH = HL, LH, LL
-Reg6: HH = LH, LL, but != HL
-Reg5: HH = HL, LH, LL
+Findings: no difference across all conditions in regions 1, 2, 4, 5 and 7. Condition HL was read *faster* than all other conditions in region 3 (non-critical) and *slower* than all other conditions in region 6 (critical).
 
 
 Important things to note about the R file:

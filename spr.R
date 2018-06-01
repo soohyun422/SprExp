@@ -1,5 +1,3 @@
-
-
 rm(list=ls())
 library(languageR)
 library(lme4)
@@ -9,7 +7,7 @@ library(stringr)
 
 
 ####
-#### Read in the dataset
+#### Read dataset
 ####
 
 ibex_raw_l1 <- read.delim("list1.txt",header=TRUE)
@@ -17,13 +15,12 @@ ibex_raw_l2 <- read.delim("list2.txt",header=TRUE)
 ibex_raw_l3 <- read.delim("list3.txt",header=TRUE)
 ibex_raw_l4 <- read.delim("list4.txt",header=TRUE)
 
-ibex_raw <- rbind(ibex_raw_l1,ibex_raw_l2,ibex_raw_l3,ibex_raw_l4)
+ibex_raw <- rbind(ibex_raw_l1,ibex_raw_l2,ibex_raw_l3) #,ibex_raw_l4)
 rm(ibex_raw_l1,ibex_raw_l2,ibex_raw_l3,ibex_raw_l4)
 
 ibex_raw$Type <- factor(ibex_raw$Type)
 ibex_raw$ParticipantIP <- factor(ibex_raw$ParticipantIP)
 ibex_raw$Controller <- factor(ibex_raw$Controller)
-ibex_raw$WorkerID <- factor(as.numeric(ibex_raw$WorkerID))
 ibex_raw$WordNumber <- factor(ibex_raw$WordNumber)
 ibex_raw$Item <- factor(ibex_raw$Item)
 ibex_raw$TimeReceived <- NULL
@@ -74,10 +71,14 @@ accuracy
 ###########################################################
 
 
-if (FALSE) {
-spr_raw <- spr_raw[which(spr_raw$WorkerID  != "bob" &
-                         spr_raw$WorkerID != "mia" ), ]
- }
+
+spr_raw <- spr_raw[which(spr_raw$WorkerID  != "A3963FCT1PKKOH" &
+                         spr_raw$WorkerID != "A1PUHCEBSOWETV" &
+                         spr_raw$WorkerID != "A3E9A9O3CLMEW" ), ]
+ 
+ 
+spr_raw$WorkerID <- factor(spr_raw$WorkerID) 
+summary(spr_raw$WorkerID)
  
 
 ###########################################################
@@ -175,11 +176,11 @@ spr_clean$Length <- str_length(spr_clean$Word)
 ####
 ###########################################################
 
+spr_clean$WorkerID <- factor(as.numeric(spr_clean$WorkerID))
+
 ls01 <- spr_clean[which(spr_clean$WorkerID == "1"), ]
 ls02 <- spr_clean[which(spr_clean$WorkerID == "2"), ]
 ls03 <- spr_clean[which(spr_clean$WorkerID == "3"), ]
-
-if (FALSE) {
 ls04 <- spr_clean[which(spr_clean$WorkerID == "4"), ]
 ls05 <- spr_clean[which(spr_clean$WorkerID == "5"), ]
 ls06 <- spr_clean[which(spr_clean$WorkerID == "6"), ]
@@ -208,16 +209,6 @@ ls28 <- spr_clean[which(spr_clean$WorkerID == "28"), ]
 ls29 <- spr_clean[which(spr_clean$WorkerID == "29"), ]
 ls30 <- spr_clean[which(spr_clean$WorkerID == "30"), ]
 ls31 <- spr_clean[which(spr_clean$WorkerID == "31"), ]
-ls32 <- spr_clean[which(spr_clean$WorkerID == "32"), ]
-ls33 <- spr_clean[which(spr_clean$WorkerID == "33"), ]
-ls34 <- spr_clean[which(spr_clean$WorkerID == "34"), ]
-ls35 <- spr_clean[which(spr_clean$WorkerID == "35"), ]
-ls36 <- spr_clean[which(spr_clean$WorkerID == "36"), ]
-ls37 <- spr_clean[which(spr_clean$WorkerID == "37"), ]
-ls38 <- spr_clean[which(spr_clean$WorkerID == "38"), ]
-ls39 <- spr_clean[which(spr_clean$WorkerID == "39"), ]
-ls40 <- spr_clean[which(spr_clean$WorkerID == "40"), ]
-}
 
 
 ###########################################################
@@ -248,7 +239,6 @@ detach(ls03)
 
 spr_clean[which(spr_clean$WorkerID == "3"),]$LBeta <- summary(lm)$coefficients[2]
 
-if (FALSE) {
 attach(ls04)
 lm <- lm(ReadingTime ~ Length)
 detach(ls04)
@@ -417,60 +407,6 @@ detach(ls31)
 
 spr_clean[which(spr_clean$WorkerID == "31"),]$LBeta <- summary(lm)$coefficients[2]
 
-attach(ls32)
-lm <- lm(ReadingTime ~ Length)
-detach(ls32)
-
-spr_clean[which(spr_clean$WorkerID == "32"),]$LBeta <- summary(lm)$coefficients[2]
-
-attach(ls33)
-lm <- lm(ReadingTime ~ Length)
-detach(ls33)
-
-spr_clean[which(spr_clean$WorkerID == "33"),]$LBeta <- summary(lm)$coefficients[2]
-
-attach(ls34)
-lm <- lm(ReadingTime ~ Length)
-detach(ls34)
-
-spr_clean[which(spr_clean$WorkerID == "34"),]$LBeta <- summary(lm)$coefficients[2]
-
-attach(ls35)
-lm <- lm(ReadingTime ~ Length)
-detach(ls35)
-
-spr_clean[which(spr_clean$WorkerID == "35"),]$LBeta <- summary(lm)$coefficients[2]
-
-attach(ls36)
-lm <- lm(ReadingTime ~ Length)
-detach(ls36)
-
-spr_clean[which(spr_clean$WorkerID == "36"),]$LBeta <- summary(lm)$coefficients[2]
-
-attach(ls37)
-lm <- lm(ReadingTime ~ Length)
-detach(ls37)
-
-spr_clean[which(spr_clean$WorkerID == "37"),]$LBeta <- summary(lm)$coefficients[2]
-
-attach(ls38)
-lm <- lm(ReadingTime ~ Length)
-detach(ls38)
-
-spr_clean[which(spr_clean$WorkerID == "38"),]$LBeta <- summary(lm)$coefficients[2]
-
-attach(ls39)
-lm <- lm(ReadingTime ~ Length)
-detach(ls39)
-
-spr_clean[which(spr_clean$WorkerID == "39"),]$LBeta <- summary(lm)$coefficients[2]
-
-attach(ls40)
-lm <- lm(ReadingTime ~ Length)
-detach(ls40)
-
-spr_clean[which(spr_clean$WorkerID == "40"),]$LBeta <- summary(lm)$coefficients[2]
-}
 
 
 ###########################################################
@@ -1634,7 +1570,7 @@ length.HL.reg7
 error.HL.reg7 <- qt(0.975,df=length.HL.reg7-1)*sd.HL.reg7/sqrt(length.HL.reg7)
 error.HL.reg7 
 
-left.HL.reg7 <- mean.HL.reg7 - error.HL.reg7
+left.HL.reg7 <- mean.HL.reg7 - error.HL.reg7    
 left.HL.reg7
 
 right.HL.reg7 <- mean.HL.reg7 + error.HL.reg7
@@ -1717,38 +1653,66 @@ cat("\\documentclass[11pt]{article}
 		y dir=both,
 		y explicit
 ] 
-	coordinates {
- 			   (1,")
-   cat(mean.LL.reg1)
-   cat(") +- (")
-   cat(left.LL.reg1)
-   cat(",")
-   cat(right.LL.reg1)
-   cat(")
- 			   (2,439) +- (21,21)
- 			   (3,360) +- (22,22)
- 			   (4,431) +- (25,25)
- 			   (5,398) +- (21,21)
- 			   (6,378) +- (24,24)
- 			   (7,411) +- (23,23)
-};
+	coordinates {") 			 
+   cat("(1,",mean.LL.reg1,") +- (",trunc(error.LL.reg1),",",trunc(error.LL.reg1),")")
+   cat("(2,",mean.LL.reg2,") +- (",trunc(error.LL.reg2),",",trunc(error.LL.reg2),")")
+   cat("(3,",mean.LL.reg3,") +- (",trunc(error.LL.reg3),",",trunc(error.LL.reg3),")")
+   cat("(4,",mean.LL.reg4,") +- (",trunc(error.LL.reg4),",",trunc(error.LL.reg4),")")
+   cat("(5,",mean.LL.reg5,") +- (",trunc(error.LL.reg5),",",trunc(error.LL.reg5),")")
+   cat("(6,",mean.LL.reg6,") +- (",trunc(error.LL.reg6),",",trunc(error.LL.reg6),")")            
+   cat("(7,",mean.LL.reg7,") +- (",trunc(error.LL.reg7),",",trunc(error.LL.reg7),")")               
+cat("};
 \\addplot[
-		mark=square,
+		mark=*,
+		densely dotted,
+		error bars/.cd,
+		error bar style={color=black},
+		y dir=both,
+		y explicit
+] 
+	coordinates {") 			 
+   cat("(1,",mean.LH.reg1,") +- (",trunc(error.LH.reg1),",",trunc(error.LH.reg1),")")
+   cat("(2,",mean.LH.reg2,") +- (",trunc(error.LH.reg2),",",trunc(error.LH.reg2),")")
+   cat("(3,",mean.LH.reg3,") +- (",trunc(error.LH.reg3),",",trunc(error.LH.reg3),")")
+   cat("(4,",mean.LH.reg4,") +- (",trunc(error.LH.reg4),",",trunc(error.LH.reg4),")")
+   cat("(5,",mean.LH.reg5,") +- (",trunc(error.LH.reg5),",",trunc(error.LH.reg5),")")
+   cat("(6,",mean.LH.reg6,") +- (",trunc(error.LH.reg6),",",trunc(error.LH.reg6),")")            
+   cat("(7,",mean.LH.reg7,") +- (",trunc(error.LH.reg7),",",trunc(error.LH.reg7),")")               
+cat("};
+\\addplot[
+		mark=triangle*,
+		dotted,
+		error bars/.cd,
+		error bar style={color=black},
+		y dir=both,
+		y explicit
+] 
+	coordinates {") 			 
+   cat("(1,",mean.HL.reg1,") +- (",trunc(error.HL.reg1),",",trunc(error.HL.reg1),")")
+   cat("(2,",mean.HL.reg2,") +- (",trunc(error.HL.reg2),",",trunc(error.HL.reg2),")")
+   cat("(3,",mean.HL.reg3,") +- (",trunc(error.HL.reg3),",",trunc(error.HL.reg3),")")
+   cat("(4,",mean.HL.reg4,") +- (",trunc(error.HL.reg4),",",trunc(error.HL.reg4),")")
+   cat("(5,",mean.HL.reg5,") +- (",trunc(error.HL.reg5),",",trunc(error.HL.reg5),")")
+   cat("(6,",mean.HL.reg6,") +- (",trunc(error.HL.reg6),",",trunc(error.HL.reg6),")")            
+   cat("(7,",mean.HL.reg7,") +- (",trunc(error.HL.reg7),",",trunc(error.HL.reg7),")")               
+cat("};
+\\addplot[
+		mark=square*,
 		dashed,
 		error bars/.cd,
 		error bar style={color=black},
 		y dir=both,
 		y explicit
 ] 
-	coordinates {
- 			   (1,442) +- (25,25)
- 			   (2,443) +- (20,20)
- 			   (3,378) +- (23,23)
- 			   (4,450) +- (26,26)
- 			   (5,412) +- (23,23)
- 			   (6,390) +- (24,24)
- 			   (7,437) +- (26,26)
-};
+	coordinates {") 			 
+   cat("(1,",mean.HH.reg1,") +- (",trunc(error.HH.reg1),",",trunc(error.HH.reg1),")")
+   cat("(2,",mean.HH.reg2,") +- (",trunc(error.HH.reg2),",",trunc(error.HH.reg2),")")
+   cat("(3,",mean.HH.reg3,") +- (",trunc(error.HH.reg3),",",trunc(error.HH.reg3),")")
+   cat("(4,",mean.HH.reg4,") +- (",trunc(error.HH.reg4),",",trunc(error.HH.reg4),")")
+   cat("(5,",mean.HH.reg5,") +- (",trunc(error.HH.reg5),",",trunc(error.HH.reg5),")")
+   cat("(6,",mean.HH.reg6,") +- (",trunc(error.HH.reg6),",",trunc(error.HH.reg6),")")            
+   cat("(7,",mean.HH.reg7,") +- (",trunc(error.HH.reg7),",",trunc(error.HH.reg7),")")               
+cat("};
 \\legend{LL,LH,HL,HH}
 \\end{axis}
 \\end{tikzpicture}

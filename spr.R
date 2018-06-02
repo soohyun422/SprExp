@@ -1545,6 +1545,15 @@ lmer.LL.HLreg6 <- lmer(ResRT ~ Condition + (1|WorkerID) + (1|Item) + (1|List), d
 summary(lmer.LL.HLreg6)
 detach(lookintoReg6)
 
+# =============================== 
+# By pair: HH vs LL are not different
+
+lookintoReg6 <- reg6[which(reg6$Condition == "HH" | reg6$Condition == "LL" ),]
+
+attach(lookintoReg6)
+lmer.LL.HLreg6 <- lmer(ResRT ~ Condition + (1|WorkerID) + (1|Item) + (1|List), data=lookintoReg6)
+summary(lmer.LL.HLreg6)
+detach(lookintoReg6)
 
 
 #####

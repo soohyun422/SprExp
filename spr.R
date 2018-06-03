@@ -15,7 +15,7 @@ ibex_raw_l2 <- read.delim("list2.txt",header=TRUE)
 ibex_raw_l3 <- read.delim("list3.txt",header=TRUE)
 ibex_raw_l4 <- read.delim("list4.txt",header=TRUE)
 
-ibex_raw <- rbind(ibex_raw_l1,ibex_raw_l2,ibex_raw_l3) #,ibex_raw_l4)
+ibex_raw <- rbind(ibex_raw_l1,ibex_raw_l2,ibex_raw_l3,ibex_raw_l4)
 rm(ibex_raw_l1,ibex_raw_l2,ibex_raw_l3,ibex_raw_l4)
 
 ibex_raw$Type <- factor(ibex_raw$Type)
@@ -209,6 +209,16 @@ ls28 <- spr_clean[which(spr_clean$WorkerID == "28"), ]
 ls29 <- spr_clean[which(spr_clean$WorkerID == "29"), ]
 ls30 <- spr_clean[which(spr_clean$WorkerID == "30"), ]
 ls31 <- spr_clean[which(spr_clean$WorkerID == "31"), ]
+ls32 <- spr_clean[which(spr_clean$WorkerID == "32"), ]
+ls33 <- spr_clean[which(spr_clean$WorkerID == "33"), ]
+ls34 <- spr_clean[which(spr_clean$WorkerID == "34"), ]
+ls35 <- spr_clean[which(spr_clean$WorkerID == "35"), ]
+ls36 <- spr_clean[which(spr_clean$WorkerID == "36"), ]
+ls37 <- spr_clean[which(spr_clean$WorkerID == "37"), ]
+ls38 <- spr_clean[which(spr_clean$WorkerID == "38"), ]
+ls39 <- spr_clean[which(spr_clean$WorkerID == "39"), ]
+ls40 <- spr_clean[which(spr_clean$WorkerID == "40"), ]
+ls41 <- spr_clean[which(spr_clean$WorkerID == "41"), ]
 
 
 ###########################################################
@@ -407,6 +417,65 @@ detach(ls31)
 
 spr_clean[which(spr_clean$WorkerID == "31"),]$LBeta <- summary(lm)$coefficients[2]
 
+attach(ls32)
+lm <- lm(ReadingTime ~ Length)
+detach(ls32)
+
+spr_clean[which(spr_clean$WorkerID == "32"),]$LBeta <- summary(lm)$coefficients[2]
+
+attach(ls33)
+lm <- lm(ReadingTime ~ Length)
+detach(ls33)
+
+spr_clean[which(spr_clean$WorkerID == "33"),]$LBeta <- summary(lm)$coefficients[2]
+ 
+ attach(ls34)
+lm <- lm(ReadingTime ~ Length)
+detach(ls34)
+
+spr_clean[which(spr_clean$WorkerID == "34"),]$LBeta <- summary(lm)$coefficients[2]
+
+attach(ls35)
+lm <- lm(ReadingTime ~ Length)
+detach(ls35)
+
+spr_clean[which(spr_clean$WorkerID == "35"),]$LBeta <- summary(lm)$coefficients[2]
+
+attach(ls36)
+lm <- lm(ReadingTime ~ Length)
+detach(ls36)
+
+spr_clean[which(spr_clean$WorkerID == "36"),]$LBeta <- summary(lm)$coefficients[2]
+
+attach(ls37)
+lm <- lm(ReadingTime ~ Length)
+detach(ls37)
+
+spr_clean[which(spr_clean$WorkerID == "37"),]$LBeta <- summary(lm)$coefficients[2]
+
+attach(ls38)
+lm <- lm(ReadingTime ~ Length)
+detach(ls38)
+
+spr_clean[which(spr_clean$WorkerID == "38"),]$LBeta <- summary(lm)$coefficients[2]
+
+attach(ls39)
+lm <- lm(ReadingTime ~ Length)
+detach(ls39)
+
+spr_clean[which(spr_clean$WorkerID == "39"),]$LBeta <- summary(lm)$coefficients[2]
+
+attach(ls40)
+lm <- lm(ReadingTime ~ Length)
+detach(ls40)
+
+spr_clean[which(spr_clean$WorkerID == "40"),]$LBeta <- summary(lm)$coefficients[2]
+
+attach(ls41)
+lm <- lm(ReadingTime ~ Length)
+detach(ls41)
+
+spr_clean[which(spr_clean$WorkerID == "41"),]$LBeta <- summary(lm)$coefficients[2]
 
 
 ###########################################################

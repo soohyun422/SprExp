@@ -86,6 +86,17 @@ accuracy <- data.frame(ID = WorkerIDList, Ratio = ratio)
 accuracy <- accuracy[order(accuracy$Ratio), ]
 accuracy
 
+###########################################################
+####
+####  Remove bad data
+####
+###########################################################
+
+
+spr_raw<- subset(spr_raw,substr(spr_raw$Type,10,15)!="List1") 
+#spr_raw<- subset(spr_raw,substr(spr_raw$Type,0,15)!="block2-HL-List1")
+
+
 
 ###########################################################
 ####
@@ -94,7 +105,6 @@ accuracy
 ###########################################################
 
 
-spr_raw<- subset(spr_raw,substr(ibex_raw$Type,0,6)!="block2") #Remove Block2
 spr_raw$Type <- Null
 spr_raw <- spr_raw[which(spr_raw$WorkerID  != "A3963FCT1PKKOH" &
                            spr_raw$WorkerID != "A1PUHCEBSOWETV" &

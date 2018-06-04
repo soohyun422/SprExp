@@ -93,9 +93,8 @@ accuracy
 ###########################################################
 
 
-spr_raw<- subset(spr_raw,substr(spr_raw$Type,10,15)!="List1") 
-#spr_raw<- subset(spr_raw,substr(spr_raw$Type,0,15)!="block2-HL-List1")
-
+#spr_raw<- spr_raw[which(spr_raw$List!="List1"),] 
+spr_raw<- spr_raw[which(spr_raw$Type!="block2-HL-List1"),]
 
 
 ###########################################################
@@ -105,7 +104,7 @@ spr_raw<- subset(spr_raw,substr(spr_raw$Type,10,15)!="List1")
 ###########################################################
 
 
-spr_raw$Type <- Null
+spr_raw$Type <- NULL
 spr_raw <- spr_raw[which(spr_raw$WorkerID  != "A3963FCT1PKKOH" &
                            spr_raw$WorkerID != "A1PUHCEBSOWETV" &
                            spr_raw$WorkerID != "A3E9A9O3CLMEW" ), ]

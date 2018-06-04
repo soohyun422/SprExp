@@ -4,6 +4,7 @@ library(lme4)
 library(lmerTest)
 library(psych)
 library(stringr)
+library(ggplot2)
 
 
 ####
@@ -28,6 +29,8 @@ ibex_raw$Group <- NULL
 ibex_raw$Sentence <- NULL
 ibex_raw$Newline <- NULL
 
+ibex_raw<- ibex_raw[which(ibex_raw$Type!="block2-HL-List1"),]
+
 summary(ibex_raw)
 
 spr_raw <- subset(ibex_raw, substr(ibex_raw$Type,0,5) == "block" )
@@ -37,6 +40,7 @@ spr_raw$List <- factor(gsub("-","",regmatches(spr_raw$Type,regexpr("\\-[a-zA-Z1-
 spr_raw$Type <- NULL
 
 head(spr_raw)
+
 
 
 
@@ -169,6 +173,22 @@ summary(spr_clean)
 ###########################################################
 
 spr_clean$Length <- str_length(spr_clean$Word)
+
+
+###########################################################
+####
+####  Split conditions
+####
+###########################################################
+
+spr_clean["Patienthood"] <- NA
+spr_clean["Frequency"] <- NA
+
+spr_clean[which(substr(spr_clean$Condition,1,1) == "L"),]$Patienthood <- "L"
+spr_clean[which(substr(spr_clean$Condition,1,1) == "H"),]$Patienthood <- "H"
+spr_clean[which(substr(spr_clean$Condition,2,2) == "L"),]$Frequency <- "L"
+spr_clean[which(substr(spr_clean$Condition,2,2) == "H"),]$Frequency <- "H"
+
 
 ###########################################################
 ####
@@ -1605,7 +1625,7 @@ summary(lmer.LL.HLreg6)
 detach(lookintoReg6)
 
 # =============================== 
-# By pair: HH vs LH are not different
+# By pair: HH vs LH are different
 
 lookintoReg6 <- reg6[which(reg6$Condition == "HH" | reg6$Condition == "LH" ),]
 
@@ -1623,6 +1643,25 @@ attach(lookintoReg6)
 lmer.LL.HLreg6 <- lmer(ResRT ~ Condition + (1|WorkerID) + (1|Item) + (1|List), data=lookintoReg6)
 summary(lmer.LL.HLreg6)
 detach(lookintoReg6)
+
+
+# ================================
+# Splitting conditions
+
+attach(reg6)
+lmer.reg6 <- lmer(ResRT ~ Patienthood + Frequency + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
+summary(lmer.reg6)
+detach(reg6)
+
+attach(reg6)
+lmer.reg6 <- lmer(ResRT ~ Patienthood * Frequency + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
+summary(lmer.reg6)
+detach(reg6)
+
+
+# 
+ggplot(reg6, aes(x=reg6$Condition, y=reg6$ResRT,)) + geom_boxplot()
+
 
 
 #####
@@ -1887,7 +1926,9 @@ cat("};
 		error bar style={color=black},
 		y dir=both,
 		y explicit
-] 
+] ~/Work/R/LingExperiments/Soo/graph.pdf
+source('~/Work/R/LingExperiments/Soo/spr.R', chdir = TRUE)
+~/Work/R/LingExperiments/Soo/graph.tex
 	coordinates {") 			 
    cat("(1,",mean.HH.reg1,") +- (",trunc(error.HH.reg1),",",trunc(error.HH.reg1),")")
    cat("(2,",mean.HH.reg2,") +- (",trunc(error.HH.reg2),",",trunc(error.HH.reg2),")")

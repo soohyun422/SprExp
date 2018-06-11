@@ -4,6 +4,7 @@ library(lme4)
 library(lmerTest)
 library(psych)
 library(stringr)
+library(ggplot2)
 
 
 ####
@@ -546,139 +547,12 @@ reg7 <- spr_clean[which(spr_clean$Region == "7"), ]
 
 ###########################################################
 ####
-####  Raw descriptives
-####
-###########################################################
-
-mean(reg1[which(reg1$Patienthood == "low"), ]$ReadingTime)
-sd(reg1[which(reg1$Patienthood == "low"), ]$ReadingTime)
-
-mean(reg1[which(reg1$Patienthood == "high"), ]$ReadingTime)
-sd(reg1[which(reg1$Patienthood == "high"), ]$ReadingTime)
-
-mean(reg1[which(reg1$BigramF == "low"), ]$ReadingTime)
-sd(reg1[which(reg1$BigramF == "low"), ]$ReadingTime)
-
-mean(reg1[which(reg1$BigramF == "high"), ]$ReadingTime)
-sd(reg1[which(reg1$BigramF == "high"), ]$ReadingTime)
-
-
-
-###########################################################
-####
 ####  Length residual correction
 ####
 ###########################################################
 
 
 reg1$ResRT <- reg1$ReadingTime - (reg1$Length * reg1$LBeta) ## per participant calculation
-
-
-
-###########################################################
-####
-####  Residualized descriptives
-####
-###########################################################
-
-
-mean.PHigh.reg1 <- mean(reg1[which(reg1$Patienthood == "high"), ]$ResRT)
-mean.PHigh.reg1
-sd.PHigh.reg1 <- sd(reg1[which(reg1$Patienthood == "high"), ]$ResRT)
-sd.PHigh.reg1
-
-mean.PLow.reg1 <- mean(reg1[which(reg1$Patienthood== "low"), ]$ResRT)
-mean.PLow.reg1
-sd.PLow.reg1 <- sd(reg1[which(reg1$Patienthood== "low"), ]$ResRT)
-sd.PLow.reg1
-
-mean.FHigh.reg1 <- mean(reg1[which(reg1$BigramF == "high"), ]$ResRT)
-mean.FHigh.reg1
-sd.FHigh.reg1 <- sd(reg1[which(reg1$BigramF == "high"), ]$ResRT)
-sd.FHigh.reg1
-
-mean.FLow.reg1 <- mean(reg1[which(reg1$BigramF== "low"), ]$ResRT)
-mean.FLow.reg1
-sd.FLow.reg1 <- sd(reg1[which(reg1$BigramF == "low"), ]$ResRT)
-sd.FLow.reg1
-
-
-
-###########################################################
-####
-####  95% Confidence Interval Calculation
-####
-###########################################################
-
-
-###
-### Patienthood High
-###
-
-length.PHigh.reg1 <- length(reg1[which(reg1$Patienthood == "high"), ]$ResRT)
-length.PHigh.reg1 
-
-error.PHigh.reg1 <- qt(0.975,df=length.PHigh.reg1-1)*sd.PHigh.reg1/sqrt(length.PHigh.reg1)
-error.PHigh.reg1 
-
-left.PHigh.reg1 <- mean.PHigh.reg1 - error.PHigh.reg1
-left.PHigh.reg1
-
-right.PHigh.reg1 <- mean.PHigh.reg1 + error.PHigh.reg1
-right.PHigh.reg1 
-
-
-###
-### Patienthood Low
-###
-
-length.PLow.reg1 <- length(reg1[which(reg1$Patienthood == "low"), ]$ResRT)
-length.PLow.reg1 
-
-error.PLow.reg1 <- qt(0.975,df=length.PLow.reg1-1)*sd.PLow.reg1/sqrt(length.PLow.reg1)
-error.PLow.reg1 
-
-left.PLow.reg1 <- mean.PLow.reg1 - error.PLow.reg1
-left.PLow.reg1
-
-right.PLow.reg1 <- mean.PLow.reg1 + error.PLow.reg1
-right.PLow.reg1 
-
-
-###
-### Bigram Frequency High
-###
-
-length.FHigh.reg1 <- length(reg1[which(reg1$BigramF == "high"), ]$ResRT)
-length.FHigh.reg1 
-
-error.FHigh.reg1 <- qt(0.975,df=length.FHigh.reg1-1)*sd.FHigh.reg1/sqrt(length.FHigh.reg1)
-error.FHigh.reg1 
-
-left.FHigh.reg1 <- mean.FHigh.reg1 - error.FHigh.reg1
-left.FHigh.reg1
-
-right.FHigh.reg1 <- mean.FHigh.reg1 + error.FHigh.reg1
-right.FHigh.reg1 
-
-
-###
-### Bigram Frequency Low
-###
-
-length.FLow.reg1 <- length(reg1[which(reg1$BigramF == "low"), ]$ResRT)
-length.FLow.reg1 
-
-error.FLow.reg1 <- qt(0.975,df=length.FLow.reg1-1)*sd.FLow.reg1/sqrt(length.FLow.reg1)
-error.FLow.reg1 
-
-left.FLow.reg1 <- mean.FLow.reg1 - error.FLow.reg1
-left.FLow.reg1
-
-right.FLow.reg1 <- mean.FLow.reg1 + error.FLow.reg1
-right.FLow.reg1 
-
-
 
 
 
@@ -720,138 +594,12 @@ detach(reg1)
 
 ###########################################################
 ####
-####  Raw descriptives
-####
-###########################################################
-
-mean(reg2[which(reg2$Patienthood == "low"), ]$ReadingTime)
-sd(reg2[which(reg2$Patienthood == "low"), ]$ReadingTime)
-
-mean(reg2[which(reg2$Patienthood == "high"), ]$ReadingTime)
-sd(reg2[which(reg2$Patienthood == "high"), ]$ReadingTime)
-
-mean(reg2[which(reg2$BigramF == "low"), ]$ReadingTime)
-sd(reg2[which(reg2$BigramF == "low"), ]$ReadingTime)
-
-mean(reg2[which(reg2$BigramF == "high"), ]$ReadingTime)
-sd(reg2[which(reg2$BigramF == "high"), ]$ReadingTime)
-
-
-
-###########################################################
-####
 ####  Length residual correction
 ####
 ###########################################################
 
 
 reg2$ResRT <- reg2$ReadingTime - (reg2$Length * reg2$LBeta) ## per participant calculation
-
-
-
-###########################################################
-####
-####  Residualized descriptives
-####
-###########################################################
-
-
-mean.PHigh.reg2 <- mean(reg2[which(reg2$Patienthood == "high"), ]$ResRT)
-mean.PHigh.reg2
-sd.PHigh.reg2 <- sd(reg2[which(reg2$Patienthood == "high"), ]$ResRT)
-sd.PHigh.reg2
-
-mean.PLow.reg2 <- mean(reg2[which(reg2$Patienthood== "low"), ]$ResRT)
-mean.PLow.reg2
-sd.PLow.reg2 <- sd(reg2[which(reg2$Patienthood== "low"), ]$ResRT)
-sd.PLow.reg2
-
-mean.FHigh.reg2 <- mean(reg2[which(reg2$BigramF == "high"), ]$ResRT)
-mean.FHigh.reg2
-sd.FHigh.reg2 <- sd(reg2[which(reg2$BigramF == "high"), ]$ResRT)
-sd.FHigh.reg2
-
-mean.FLow.reg2 <- mean(reg2[which(reg2$BigramF== "low"), ]$ResRT)
-mean.FLow.reg2
-sd.FLow.reg2 <- sd(reg2[which(reg2$BigramF == "low"), ]$ResRT)
-sd.FLow.reg2
-
-
-
-###########################################################
-####
-####  95% Confidence Interval Calculation
-####
-###########################################################
-
-
-###
-### Patienthood High
-###
-
-length.PHigh.reg2 <- length(reg2[which(reg2$Patienthood == "high"), ]$ResRT)
-length.PHigh.reg2 
-
-error.PHigh.reg2 <- qt(0.975,df=length.PHigh.reg2-1)*sd.PHigh.reg2/sqrt(length.PHigh.reg2)
-error.PHigh.reg2 
-
-left.PHigh.reg2 <- mean.PHigh.reg2 - error.PHigh.reg2
-left.PHigh.reg2
-
-right.PHigh.reg2 <- mean.PHigh.reg2 + error.PHigh.reg2
-right.PHigh.reg2 
-
-
-###
-### Patienthood Low
-###
-
-length.PLow.reg2 <- length(reg2[which(reg2$Patienthood == "low"), ]$ResRT)
-length.PLow.reg2 
-
-error.PLow.reg2 <- qt(0.975,df=length.PLow.reg2-1)*sd.PLow.reg2/sqrt(length.PLow.reg2)
-error.PLow.reg2 
-
-left.PLow.reg2 <- mean.PLow.reg2 - error.PLow.reg2
-left.PLow.reg2
-
-right.PLow.reg2 <- mean.PLow.reg2 + error.PLow.reg2
-right.PLow.reg2 
-
-
-###
-### Bigram Frequency High
-###
-
-length.FHigh.reg2 <- length(reg2[which(reg2$BigramF == "high"), ]$ResRT)
-length.FHigh.reg2 
-
-error.FHigh.reg2 <- qt(0.975,df=length.FHigh.reg2-1)*sd.FHigh.reg2/sqrt(length.FHigh.reg2)
-error.FHigh.reg2 
-
-left.FHigh.reg2 <- mean.FHigh.reg2 - error.FHigh.reg2
-left.FHigh.reg2
-
-right.FHigh.reg2 <- mean.FHigh.reg2 + error.FHigh.reg2
-right.FHigh.reg2 
-
-
-###
-### Bigram Frequency Low
-###
-
-length.FLow.reg2 <- length(reg2[which(reg2$BigramF == "low"), ]$ResRT)
-length.FLow.reg2 
-
-error.FLow.reg2 <- qt(0.975,df=length.FLow.reg2-1)*sd.FLow.reg2/sqrt(length.FLow.reg2)
-error.FLow.reg2 
-
-left.FLow.reg2 <- mean.FLow.reg2 - error.FLow.reg2
-left.FLow.reg2
-
-right.FLow.reg2 <- mean.FLow.reg2 + error.FLow.reg2
-right.FLow.reg2 
-
 
 
 
@@ -894,139 +642,12 @@ detach(reg2)
 
 ###########################################################
 ####
-####  Raw descriptives
-####
-###########################################################
-
-mean(reg3[which(reg3$Patienthood == "low"), ]$ReadingTime)
-sd(reg3[which(reg3$Patienthood == "low"), ]$ReadingTime)
-
-mean(reg3[which(reg3$Patienthood == "high"), ]$ReadingTime)
-sd(reg3[which(reg3$Patienthood == "high"), ]$ReadingTime)
-
-mean(reg3[which(reg3$BigramF == "low"), ]$ReadingTime)
-sd(reg3[which(reg3$BigramF == "low"), ]$ReadingTime)
-
-mean(reg3[which(reg3$BigramF == "high"), ]$ReadingTime)
-sd(reg3[which(reg3$BigramF == "high"), ]$ReadingTime)
-
-
-
-###########################################################
-####
 ####  Length residual correction
 ####
 ###########################################################
 
 
 reg3$ResRT <- reg3$ReadingTime - (reg3$Length * reg3$LBeta) ## per participant calculation
-
-
-
-###########################################################
-####
-####  Residualized descriptives
-####
-###########################################################
-
-
-mean.PHigh.reg3 <- mean(reg3[which(reg3$Patienthood == "high"), ]$ResRT)
-mean.PHigh.reg3
-sd.PHigh.reg3 <- sd(reg3[which(reg3$Patienthood == "high"), ]$ResRT)
-sd.PHigh.reg3
-
-mean.PLow.reg3 <- mean(reg3[which(reg3$Patienthood== "low"), ]$ResRT)
-mean.PLow.reg3
-sd.PLow.reg3 <- sd(reg3[which(reg3$Patienthood== "low"), ]$ResRT)
-sd.PLow.reg3
-
-mean.FHigh.reg3 <- mean(reg3[which(reg3$BigramF == "high"), ]$ResRT)
-mean.FHigh.reg3
-sd.FHigh.reg3 <- sd(reg3[which(reg3$BigramF == "high"), ]$ResRT)
-sd.FHigh.reg3
-
-mean.FLow.reg3 <- mean(reg3[which(reg3$BigramF== "low"), ]$ResRT)
-mean.FLow.reg3
-sd.FLow.reg3 <- sd(reg3[which(reg3$BigramF == "low"), ]$ResRT)
-sd.FLow.reg3
-
-
-
-###########################################################
-####
-####  95% Confidence Interval Calculation
-####
-###########################################################
-
-
-###
-### Patienthood High
-###
-
-length.PHigh.reg3 <- length(reg3[which(reg3$Patienthood == "high"), ]$ResRT)
-length.PHigh.reg3 
-
-error.PHigh.reg3 <- qt(0.975,df=length.PHigh.reg3-1)*sd.PHigh.reg3/sqrt(length.PHigh.reg3)
-error.PHigh.reg3 
-
-left.PHigh.reg3 <- mean.PHigh.reg3 - error.PHigh.reg3
-left.PHigh.reg3
-
-right.PHigh.reg3 <- mean.PHigh.reg3 + error.PHigh.reg3
-right.PHigh.reg3 
-
-
-###
-### Patienthood Low
-###
-
-length.PLow.reg3 <- length(reg3[which(reg3$Patienthood == "low"), ]$ResRT)
-length.PLow.reg3 
-
-error.PLow.reg3 <- qt(0.975,df=length.PLow.reg3-1)*sd.PLow.reg3/sqrt(length.PLow.reg3)
-error.PLow.reg3 
-
-left.PLow.reg3 <- mean.PLow.reg3 - error.PLow.reg3
-left.PLow.reg3
-
-right.PLow.reg3 <- mean.PLow.reg3 + error.PLow.reg3
-right.PLow.reg3 
-
-
-###
-### Bigram Frequency High
-###
-
-length.FHigh.reg3 <- length(reg3[which(reg3$BigramF == "high"), ]$ResRT)
-length.FHigh.reg3 
-
-error.FHigh.reg3 <- qt(0.975,df=length.FHigh.reg3-1)*sd.FHigh.reg3/sqrt(length.FHigh.reg3)
-error.FHigh.reg3 
-
-left.FHigh.reg3 <- mean.FHigh.reg3 - error.FHigh.reg3
-left.FHigh.reg3
-
-right.FHigh.reg3 <- mean.FHigh.reg3 + error.FHigh.reg3
-right.FHigh.reg3 
-
-
-###
-### Bigram Frequency Low
-###
-
-length.FLow.reg3 <- length(reg3[which(reg3$BigramF == "low"), ]$ResRT)
-length.FLow.reg3 
-
-error.FLow.reg3 <- qt(0.975,df=length.FLow.reg3-1)*sd.FLow.reg3/sqrt(length.FLow.reg3)
-error.FLow.reg3 
-
-left.FLow.reg3 <- mean.FLow.reg3 - error.FLow.reg3
-left.FLow.reg3
-
-right.FLow.reg3 <- mean.FLow.reg3 + error.FLow.reg3
-right.FLow.reg3 
-
-
 
 
 
@@ -1069,138 +690,12 @@ detach(reg3)
 
 ###########################################################
 ####
-####  Raw descriptives
-####
-###########################################################
-
-mean(reg4[which(reg4$Patienthood == "low"), ]$ReadingTime)
-sd(reg4[which(reg4$Patienthood == "low"), ]$ReadingTime)
-
-mean(reg4[which(reg4$Patienthood == "high"), ]$ReadingTime)
-sd(reg4[which(reg4$Patienthood == "high"), ]$ReadingTime)
-
-mean(reg4[which(reg4$BigramF == "low"), ]$ReadingTime)
-sd(reg4[which(reg4$BigramF == "low"), ]$ReadingTime)
-
-mean(reg4[which(reg4$BigramF == "high"), ]$ReadingTime)
-sd(reg4[which(reg4$BigramF == "high"), ]$ReadingTime)
-
-
-
-###########################################################
-####
 ####  Length residual correction
 ####
 ###########################################################
 
 
 reg4$ResRT <- reg4$ReadingTime - (reg4$Length * reg4$LBeta) ## per participant calculation
-
-
-
-###########################################################
-####
-####  Residualized descriptives
-####
-###########################################################
-
-
-mean.PHigh.reg4 <- mean(reg4[which(reg4$Patienthood == "high"), ]$ResRT)
-mean.PHigh.reg4
-sd.PHigh.reg4 <- sd(reg4[which(reg4$Patienthood == "high"), ]$ResRT)
-sd.PHigh.reg4
-
-mean.PLow.reg4 <- mean(reg4[which(reg4$Patienthood== "low"), ]$ResRT)
-mean.PLow.reg4
-sd.PLow.reg4 <- sd(reg4[which(reg4$Patienthood== "low"), ]$ResRT)
-sd.PLow.reg4
-
-mean.FHigh.reg4 <- mean(reg4[which(reg4$BigramF == "high"), ]$ResRT)
-mean.FHigh.reg4
-sd.FHigh.reg4 <- sd(reg4[which(reg4$BigramF == "high"), ]$ResRT)
-sd.FHigh.reg4
-
-mean.FLow.reg4 <- mean(reg4[which(reg4$BigramF== "low"), ]$ResRT)
-mean.FLow.reg4
-sd.FLow.reg4 <- sd(reg4[which(reg4$BigramF == "low"), ]$ResRT)
-sd.FLow.reg4
-
-
-
-###########################################################
-####
-####  95% Confidence Interval Calculation
-####
-###########################################################
-
-
-###
-### Patienthood High
-###
-
-length.PHigh.reg4 <- length(reg4[which(reg4$Patienthood == "high"), ]$ResRT)
-length.PHigh.reg4 
-
-error.PHigh.reg4 <- qt(0.975,df=length.PHigh.reg4-1)*sd.PHigh.reg4/sqrt(length.PHigh.reg4)
-error.PHigh.reg4 
-
-left.PHigh.reg4 <- mean.PHigh.reg4 - error.PHigh.reg4
-left.PHigh.reg4
-
-right.PHigh.reg4 <- mean.PHigh.reg4 + error.PHigh.reg4
-right.PHigh.reg4 
-
-
-###
-### Patienthood Low
-###
-
-length.PLow.reg4 <- length(reg4[which(reg4$Patienthood == "low"), ]$ResRT)
-length.PLow.reg4 
-
-error.PLow.reg4 <- qt(0.975,df=length.PLow.reg4-1)*sd.PLow.reg4/sqrt(length.PLow.reg4)
-error.PLow.reg4 
-
-left.PLow.reg4 <- mean.PLow.reg4 - error.PLow.reg4
-left.PLow.reg4
-
-right.PLow.reg4 <- mean.PLow.reg4 + error.PLow.reg4
-right.PLow.reg4 
-
-
-###
-### Bigram Frequency High
-###
-
-length.FHigh.reg4 <- length(reg4[which(reg4$BigramF == "high"), ]$ResRT)
-length.FHigh.reg4 
-
-error.FHigh.reg4 <- qt(0.975,df=length.FHigh.reg4-1)*sd.FHigh.reg4/sqrt(length.FHigh.reg4)
-error.FHigh.reg4 
-
-left.FHigh.reg4 <- mean.FHigh.reg4 - error.FHigh.reg4
-left.FHigh.reg4
-
-right.FHigh.reg4 <- mean.FHigh.reg4 + error.FHigh.reg4
-right.FHigh.reg4 
-
-
-###
-### Bigram Frequency Low
-###
-
-length.FLow.reg4 <- length(reg4[which(reg4$BigramF == "low"), ]$ResRT)
-length.FLow.reg4 
-
-error.FLow.reg4 <- qt(0.975,df=length.FLow.reg4-1)*sd.FLow.reg4/sqrt(length.FLow.reg4)
-error.FLow.reg4 
-
-left.FLow.reg4 <- mean.FLow.reg4 - error.FLow.reg4
-left.FLow.reg4
-
-right.FLow.reg4 <- mean.FLow.reg4 + error.FLow.reg4
-right.FLow.reg4 
-
 
 
 
@@ -1240,25 +735,6 @@ detach(reg4)
 
 
 
-###########################################################
-####
-####  Raw descriptives
-####
-###########################################################
-
-mean(reg5[which(reg5$Patienthood == "low"), ]$ReadingTime)
-sd(reg5[which(reg5$Patienthood == "low"), ]$ReadingTime)
-
-mean(reg5[which(reg5$Patienthood == "high"), ]$ReadingTime)
-sd(reg5[which(reg5$Patienthood == "high"), ]$ReadingTime)
-
-mean(reg5[which(reg5$BigramF == "low"), ]$ReadingTime)
-sd(reg5[which(reg5$BigramF == "low"), ]$ReadingTime)
-
-mean(reg5[which(reg5$BigramF == "high"), ]$ReadingTime)
-sd(reg5[which(reg5$BigramF == "high"), ]$ReadingTime)
-
-
 
 ###########################################################
 ####
@@ -1268,113 +744,6 @@ sd(reg5[which(reg5$BigramF == "high"), ]$ReadingTime)
 
 
 reg5$ResRT <- reg5$ReadingTime - (reg5$Length * reg5$LBeta) ## per participant calculation
-
-
-
-###########################################################
-####
-####  Residualized descriptives
-####
-###########################################################
-
-
-mean.PHigh.reg5 <- mean(reg5[which(reg5$Patienthood == "high"), ]$ResRT)
-mean.PHigh.reg5
-sd.PHigh.reg5 <- sd(reg5[which(reg5$Patienthood == "high"), ]$ResRT)
-sd.PHigh.reg5
-
-mean.PLow.reg5 <- mean(reg5[which(reg5$Patienthood== "low"), ]$ResRT)
-mean.PLow.reg5
-sd.PLow.reg5 <- sd(reg5[which(reg5$Patienthood== "low"), ]$ResRT)
-sd.PLow.reg5
-
-mean.FHigh.reg5 <- mean(reg5[which(reg5$BigramF == "high"), ]$ResRT)
-mean.FHigh.reg5
-sd.FHigh.reg5 <- sd(reg5[which(reg5$BigramF == "high"), ]$ResRT)
-sd.FHigh.reg5
-
-mean.FLow.reg5 <- mean(reg5[which(reg5$BigramF== "low"), ]$ResRT)
-mean.FLow.reg5
-sd.FLow.reg5 <- sd(reg5[which(reg5$BigramF == "low"), ]$ResRT)
-sd.FLow.reg5
-
-
-
-###########################################################
-####
-####  95% Confidence Interval Calculation
-####
-###########################################################
-
-
-###
-### Patienthood High
-###
-
-length.PHigh.reg5 <- length(reg5[which(reg5$Patienthood == "high"), ]$ResRT)
-length.PHigh.reg5 
-
-error.PHigh.reg5 <- qt(0.975,df=length.PHigh.reg5-1)*sd.PHigh.reg5/sqrt(length.PHigh.reg5)
-error.PHigh.reg5 
-
-left.PHigh.reg5 <- mean.PHigh.reg5 - error.PHigh.reg5
-left.PHigh.reg5
-
-right.PHigh.reg5 <- mean.PHigh.reg5 + error.PHigh.reg5
-right.PHigh.reg5 
-
-
-###
-### Patienthood Low
-###
-
-length.PLow.reg5 <- length(reg5[which(reg5$Patienthood == "low"), ]$ResRT)
-length.PLow.reg5 
-
-error.PLow.reg5 <- qt(0.975,df=length.PLow.reg5-1)*sd.PLow.reg5/sqrt(length.PLow.reg5)
-error.PLow.reg5 
-
-left.PLow.reg5 <- mean.PLow.reg5 - error.PLow.reg5
-left.PLow.reg5
-
-right.PLow.reg5 <- mean.PLow.reg5 + error.PLow.reg5
-right.PLow.reg5 
-
-
-###
-### Bigram Frequency High
-###
-
-length.FHigh.reg5 <- length(reg5[which(reg5$BigramF == "high"), ]$ResRT)
-length.FHigh.reg5 
-
-error.FHigh.reg5 <- qt(0.975,df=length.FHigh.reg5-1)*sd.FHigh.reg5/sqrt(length.FHigh.reg5)
-error.FHigh.reg5 
-
-left.FHigh.reg5 <- mean.FHigh.reg5 - error.FHigh.reg5
-left.FHigh.reg5
-
-right.FHigh.reg5 <- mean.FHigh.reg5 + error.FHigh.reg5
-right.FHigh.reg5 
-
-
-###
-### Bigram Frequency Low
-###
-
-length.FLow.reg5 <- length(reg5[which(reg5$BigramF == "low"), ]$ResRT)
-length.FLow.reg5 
-
-error.FLow.reg5 <- qt(0.975,df=length.FLow.reg5-1)*sd.FLow.reg5/sqrt(length.FLow.reg5)
-error.FLow.reg5 
-
-left.FLow.reg5 <- mean.FLow.reg5 - error.FLow.reg5
-left.FLow.reg5
-
-right.FLow.reg5 <- mean.FLow.reg5 + error.FLow.reg5
-right.FLow.reg5 
-
-
 
 
 
@@ -1419,140 +788,12 @@ detach(reg5)
 
 ###########################################################
 ####
-####  Raw descriptives
-####
-###########################################################
-
-mean(reg6[which(reg6$Patienthood == "low"), ]$ReadingTime)
-sd(reg6[which(reg6$Patienthood == "low"), ]$ReadingTime)
-
-mean(reg6[which(reg6$Patienthood == "high"), ]$ReadingTime)
-sd(reg6[which(reg6$Patienthood == "high"), ]$ReadingTime)
-
-mean(reg6[which(reg6$BigramF == "low"), ]$ReadingTime)
-sd(reg6[which(reg6$BigramF == "low"), ]$ReadingTime)
-
-mean(reg6[which(reg6$BigramF == "high"), ]$ReadingTime)
-sd(reg6[which(reg6$BigramF == "high"), ]$ReadingTime)
-
-
-
-###########################################################
-####
 ####  Length residual correction
 ####
 ###########################################################
 
 
 reg6$ResRT <- reg6$ReadingTime - (reg6$Length * reg6$LBeta) ## per participant calculation
-
-
-
-###########################################################
-####
-####  Residualized descriptives
-####
-###########################################################
-
-
-mean.PHigh.reg6 <- mean(reg6[which(reg6$Patienthood == "high"), ]$ResRT)
-mean.PHigh.reg6
-sd.PHigh.reg6 <- sd(reg6[which(reg6$Patienthood == "high"), ]$ResRT)
-sd.PHigh.reg6
-
-mean.PLow.reg6 <- mean(reg6[which(reg6$Patienthood== "low"), ]$ResRT)
-mean.PLow.reg6
-sd.PLow.reg6 <- sd(reg6[which(reg6$Patienthood== "low"), ]$ResRT)
-sd.PLow.reg6
-
-mean.FHigh.reg6 <- mean(reg6[which(reg6$BigramF == "high"), ]$ResRT)
-mean.FHigh.reg6
-sd.FHigh.reg6 <- sd(reg6[which(reg6$BigramF == "high"), ]$ResRT)
-sd.FHigh.reg6
-
-mean.FLow.reg6 <- mean(reg6[which(reg6$BigramF== "low"), ]$ResRT)
-mean.FLow.reg6
-sd.FLow.reg6 <- sd(reg6[which(reg6$BigramF == "low"), ]$ResRT)
-sd.FLow.reg6
-
-
-
-###########################################################
-####
-####  95% Confidence Interval Calculation
-####
-###########################################################
-
-
-###
-### Patienthood High
-###
-
-length.PHigh.reg6 <- length(reg6[which(reg6$Patienthood == "high"), ]$ResRT)
-length.PHigh.reg6 
-
-error.PHigh.reg6 <- qt(0.975,df=length.PHigh.reg6-1)*sd.PHigh.reg6/sqrt(length.PHigh.reg6)
-error.PHigh.reg6 
-
-left.PHigh.reg6 <- mean.PHigh.reg6 - error.PHigh.reg6
-left.PHigh.reg6
-
-right.PHigh.reg6 <- mean.PHigh.reg6 + error.PHigh.reg6
-right.PHigh.reg6 
-
-
-###
-### Patienthood Low
-###
-
-length.PLow.reg6 <- length(reg6[which(reg6$Patienthood == "low"), ]$ResRT)
-length.PLow.reg6 
-
-error.PLow.reg6 <- qt(0.975,df=length.PLow.reg6-1)*sd.PLow.reg6/sqrt(length.PLow.reg6)
-error.PLow.reg6 
-
-left.PLow.reg6 <- mean.PLow.reg6 - error.PLow.reg6
-left.PLow.reg6
-
-right.PLow.reg6 <- mean.PLow.reg6 + error.PLow.reg6
-right.PLow.reg6 
-
-
-###
-### Bigram Frequency High
-###
-
-length.FHigh.reg6 <- length(reg6[which(reg6$BigramF == "high"), ]$ResRT)
-length.FHigh.reg6 
-
-error.FHigh.reg6 <- qt(0.975,df=length.FHigh.reg6-1)*sd.FHigh.reg6/sqrt(length.FHigh.reg6)
-error.FHigh.reg6 
-
-left.FHigh.reg6 <- mean.FHigh.reg6 - error.FHigh.reg6
-left.FHigh.reg6
-
-right.FHigh.reg6 <- mean.FHigh.reg6 + error.FHigh.reg6
-right.FHigh.reg6 
-
-
-###
-### Bigram Frequency Low
-###
-
-length.FLow.reg6 <- length(reg6[which(reg6$BigramF == "low"), ]$ResRT)
-length.FLow.reg6 
-
-error.FLow.reg6 <- qt(0.975,df=length.FLow.reg6-1)*sd.FLow.reg6/sqrt(length.FLow.reg6)
-error.FLow.reg6 
-
-left.FLow.reg6 <- mean.FLow.reg6 - error.FLow.reg6
-left.FLow.reg6
-
-right.FLow.reg6 <- mean.FLow.reg6 + error.FLow.reg6
-right.FLow.reg6 
-
-
-
 
 
 ###########################################################
@@ -1570,18 +811,30 @@ lmer.reg6.Frequency <- lmer(ResRT ~ BigramF + (1|WorkerID) + (1|Item) + (1|List)
 summary(lmer.reg6.Frequency)
 lmer.reg6.Interaction <- lmer(ResRT ~ Patienthood*BigramF + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
 summary(lmer.reg6.Interaction)
-detach(reg6)
+
 
 
 #####
 #####
 ##### End LMER
 #####
-#####
+##### 
 
+###########################################################
+####
+####  Graph
+####
+###########################################################
 
+fit<-lm(ResRT~Patienthood*BigramF,data=reg6)
 
+fit %>%
+  ggplot()+
+  aes(x=reorder(Patienthood,-ResRT), color = BigramF, group=BigramF, y = ResRT)+
+  stat_summary(fun.y = mean, geom="line")+
+  labs(x = "Patienthood")
 
+detach(reg6)
 
 ###########################################################
 ###########################################################
@@ -1593,23 +846,6 @@ detach(reg6)
 
 
 
-###########################################################
-####
-####  Raw descriptives
-####
-###########################################################
-
-mean(reg7[which(reg7$Patienthood == "low"), ]$ReadingTime)
-sd(reg7[which(reg7$Patienthood == "low"), ]$ReadingTime)
-
-mean(reg7[which(reg7$Patienthood == "high"), ]$ReadingTime)
-sd(reg7[which(reg7$Patienthood == "high"), ]$ReadingTime)
-
-mean(reg7[which(reg7$BigramF == "low"), ]$ReadingTime)
-sd(reg7[which(reg7$BigramF == "low"), ]$ReadingTime)
-
-mean(reg7[which(reg7$BigramF == "high"), ]$ReadingTime)
-sd(reg7[which(reg7$BigramF == "high"), ]$ReadingTime)
 
 
 
@@ -1622,110 +858,6 @@ sd(reg7[which(reg7$BigramF == "high"), ]$ReadingTime)
 
 reg7$ResRT <- reg7$ReadingTime - (reg7$Length * reg7$LBeta) ## per participant calculation
 
-
-
-###########################################################
-####
-####  Residualized descriptives
-####
-###########################################################
-
-
-mean.PHigh.reg7 <- mean(reg7[which(reg7$Patienthood == "high"), ]$ResRT)
-mean.PHigh.reg7
-sd.PHigh.reg7 <- sd(reg7[which(reg7$Patienthood == "high"), ]$ResRT)
-sd.PHigh.reg7
-
-mean.PLow.reg7 <- mean(reg7[which(reg7$Patienthood== "low"), ]$ResRT)
-mean.PLow.reg7
-sd.PLow.reg7 <- sd(reg7[which(reg7$Patienthood== "low"), ]$ResRT)
-sd.PLow.reg7
-
-mean.FHigh.reg7 <- mean(reg7[which(reg7$BigramF == "high"), ]$ResRT)
-mean.FHigh.reg7
-sd.FHigh.reg7 <- sd(reg7[which(reg7$BigramF == "high"), ]$ResRT)
-sd.FHigh.reg7
-
-mean.FLow.reg7 <- mean(reg7[which(reg7$BigramF== "low"), ]$ResRT)
-mean.FLow.reg7
-sd.FLow.reg7 <- sd(reg7[which(reg7$BigramF == "low"), ]$ResRT)
-sd.FLow.reg7
-
-
-
-###########################################################
-####
-####  95% Confidence Interval Calculation
-####
-###########################################################
-
-
-###
-### Patienthood High
-###
-
-length.PHigh.reg7 <- length(reg7[which(reg7$Patienthood == "high"), ]$ResRT)
-length.PHigh.reg7 
-
-error.PHigh.reg7 <- qt(0.975,df=length.PHigh.reg7-1)*sd.PHigh.reg7/sqrt(length.PHigh.reg7)
-error.PHigh.reg7 
-
-left.PHigh.reg7 <- mean.PHigh.reg7 - error.PHigh.reg7
-left.PHigh.reg7
-
-right.PHigh.reg7 <- mean.PHigh.reg7 + error.PHigh.reg7
-right.PHigh.reg7 
-
-
-###
-### Patienthood Low
-###
-
-length.PLow.reg7 <- length(reg7[which(reg7$Patienthood == "low"), ]$ResRT)
-length.PLow.reg7 
-
-error.PLow.reg7 <- qt(0.975,df=length.PLow.reg7-1)*sd.PLow.reg7/sqrt(length.PLow.reg7)
-error.PLow.reg7 
-
-left.PLow.reg7 <- mean.PLow.reg7 - error.PLow.reg7
-left.PLow.reg7
-
-right.PLow.reg7 <- mean.PLow.reg7 + error.PLow.reg7
-right.PLow.reg7 
-
-
-###
-### Bigram Frequency High
-###
-
-length.FHigh.reg7 <- length(reg7[which(reg7$BigramF == "high"), ]$ResRT)
-length.FHigh.reg7 
-
-error.FHigh.reg7 <- qt(0.975,df=length.FHigh.reg7-1)*sd.FHigh.reg7/sqrt(length.FHigh.reg7)
-error.FHigh.reg7 
-
-left.FHigh.reg7 <- mean.FHigh.reg7 - error.FHigh.reg7
-left.FHigh.reg7
-
-right.FHigh.reg7 <- mean.FHigh.reg7 + error.FHigh.reg7
-right.FHigh.reg7 
-
-
-###
-### Bigram Frequency Low
-###
-
-length.FLow.reg7 <- length(reg7[which(reg7$BigramF == "low"), ]$ResRT)
-length.FLow.reg7 
-
-error.FLow.reg7 <- qt(0.975,df=length.FLow.reg7-1)*sd.FLow.reg7/sqrt(length.FLow.reg7)
-error.FLow.reg7 
-
-left.FLow.reg7 <- mean.FLow.reg7 - error.FLow.reg7
-left.FLow.reg7
-
-right.FLow.reg7 <- mean.FLow.reg7 + error.FLow.reg7
-right.FLow.reg7 
 
 
 
@@ -1754,4 +886,3 @@ detach(reg7)
 ##### End LMER
 #####
 #####
-

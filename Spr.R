@@ -4,12 +4,13 @@ library(lme4)
 library(lmerTest)
 library(psych)
 library(stringr)
+library(ggplot2)
 
 
 ####
 #### Read dataset
 ####
-
+data <- read.delim("Datasheet.txt",header=TRUE)
 ibex_raw_l1 <- read.delim("list1.txt",header=TRUE)
 ibex_raw_l2 <- read.delim("list2.txt",header=TRUE)
 ibex_raw_l3 <- read.delim("list3.txt",header=TRUE)
@@ -28,6 +29,8 @@ ibex_raw$Group <- NULL
 ibex_raw$Sentence <- NULL
 ibex_raw$Newline <- NULL
 
+ibex_raw<- ibex_raw[which(ibex_raw$Type!="block2-HL-List1"),]
+data<- data[which(data$Type!="block2-HL-List1"),]
 summary(ibex_raw)
 
 spr_raw <- subset(ibex_raw, substr(ibex_raw$Type,0,5) == "block" )
@@ -36,7 +39,25 @@ spr_raw$Condition <- factor(gsub("-","",regmatches(spr_raw$Type,regexpr("\\-[a-z
 spr_raw$List <- factor(gsub("-","",regmatches(spr_raw$Type,regexpr("\\-[a-zA-Z1-4]+$",spr_raw$Type,perl=TRUE))))
 
 
+
+###########################################################
+####
+####  Add Bigram Frequency, Word Frequency from Datasheet
+####
+###########################################################
+
+spr_raw["BigramF"] <- NA
+spr_raw["W_Freq"] <- NA
+
+for(type in unique(data$Type)){
+  spr_raw[which(spr_raw$Type==type),]$BigramF<-(data[which(data$Type==type),]$BigramF)
+  spr_raw[which(spr_raw$Type==type),]$W_Freq<-log(data[which(data$Type==type),]$W_Freq)
+}
+
+
 head(spr_raw)
+
+
 
 
 
@@ -63,17 +84,6 @@ accuracy <- data.frame(ID = WorkerIDList, Ratio = ratio)
 accuracy <- accuracy[order(accuracy$Ratio), ]
 accuracy
 
-###########################################################
-####
-####  Remove bad data
-####
-###########################################################
-
-
-#spr_raw<- spr_raw[which(spr_raw$List!="List1"),] 
-spr_raw<- spr_raw[which(spr_raw$Type!="block2-HL-List1"),]
-
-
 
 ###########################################################
 ####
@@ -81,7 +91,8 @@ spr_raw<- spr_raw[which(spr_raw$Type!="block2-HL-List1"),]
 ####
 ###########################################################
 
-spr_raw$Type <- NULL
+
+
 spr_raw <- spr_raw[which(spr_raw$WorkerID  != "A3963FCT1PKKOH" &
                            spr_raw$WorkerID != "A1PUHCEBSOWETV" &
                            spr_raw$WorkerID != "A3E9A9O3CLMEW" ), ]
@@ -179,6 +190,26 @@ summary(spr_clean)
 ###########################################################
 
 spr_clean$Length <- str_length(spr_clean$Word)
+
+
+###########################################################
+####
+####  Split conditions
+####
+###########################################################
+
+spr_clean["Patienthood"] <- NA
+spr_clean["Frequency"] <- NA
+
+spr_clean[which(substr(spr_clean$Condition,1,1) == "L"),]$Patienthood <- "L"
+spr_clean[which(substr(spr_clean$Condition,1,1) == "H"),]$Patienthood <- "H"
+spr_clean[which(substr(spr_clean$Condition,2,2) == "L"),]$Frequency <- "L"
+spr_clean[which(substr(spr_clean$Condition,2,2) == "H"),]$Frequency <- "H"
+
+
+
+
+
 
 ###########################################################
 ####
@@ -1401,6 +1432,12 @@ right.HH.reg5
 attach(reg5)
 lmer.reg5 <- lmer(ResRT ~ Condition + (1|WorkerID) + (1|Item) + (1|List), data=reg5)
 summary(lmer.reg5)
+
+# ================================
+# Lexical frequency effect
+
+lmer.reg5.W_Freq <- lmer(ResRT ~ W_Freq + (1|WorkerID) + (1|Item) + (1|List), data=reg5)
+summary(lmer.reg5.W_Freq)
 detach(reg5)
 
 
@@ -1572,6 +1609,14 @@ right.HH.reg6
 attach(reg6)
 lmer.reg6 <- lmer(ResRT ~ Condition + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
 summary(lmer.reg6)
+
+# ================================
+# Lexical frequency effect
+
+lmer.reg6.W_Freq <- lmer(ResRT ~ W_Freq + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
+summary(lmer.reg6.W_Freq)
+
+
 detach(reg6)
 
 # ===============================
@@ -1615,7 +1660,7 @@ summary(lmer.LL.HLreg6)
 detach(lookintoReg6)
 
 # =============================== 
-# By pair: HH vs LH are not different
+# By pair: HH vs LH are different
 
 lookintoReg6 <- reg6[which(reg6$Condition == "HH" | reg6$Condition == "LH" ),]
 
@@ -1633,6 +1678,25 @@ attach(lookintoReg6)
 lmer.LL.HLreg6 <- lmer(ResRT ~ Condition + (1|WorkerID) + (1|Item) + (1|List), data=lookintoReg6)
 summary(lmer.LL.HLreg6)
 detach(lookintoReg6)
+
+
+# ================================
+# Splitting conditions
+
+attach(reg6)
+lmer.reg6 <- lmer(ResRT ~ Patienthood + Frequency + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
+summary(lmer.reg6)
+detach(reg6)
+
+attach(reg6)
+lmer.reg6 <- lmer(ResRT ~ Patienthood * Frequency + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
+summary(lmer.reg6)
+detach(reg6)
+
+
+# 
+ggplot(reg6, aes(x=reg6$Condition, y=reg6$ResRT,)) + geom_boxplot()
+
 
 
 #####
@@ -1812,3 +1876,107 @@ detach(reg7)
 #####
 
 
+
+
+
+
+sink("graph.tex")
+cat("\\documentclass[11pt]{article}
+    \\usepackage{setspace}
+    \\usepackage{fullpage}
+    \\usepackage{pslatex}
+    \\usepackage{pgfplots}
+    \\pgfplotsset{
+    compat=1.4}
+    \\usepackage{tikz}
+    \\usetikzlibrary{shapes,arrows}
+    \\let\\word=\\textit
+    \\begin{document}
+    \\begin{figure}[htb]
+    \\centering
+    \\begin{tikzpicture}
+    \\begin{axis}[
+    width=15cm, height=12cm,
+    legend style={at={(0.85,1.02)},
+    anchor=north,legend columns=-1},
+    ylabel={Residual reading time (msec)},
+    xlabel={Region},
+    symbolic x coords={1, 2, 3, 4, 5, 6, 7},
+    xtick=data,
+    ]
+    \\addplot[
+    mark=square,
+    error bars/.cd,
+    error bar style={color=black},
+    y dir=both,
+    y explicit
+    ] 
+    coordinates {") 			 
+cat("(1,",mean.LL.reg1,") +- (",trunc(error.LL.reg1),",",trunc(error.LL.reg1),")")
+cat("(2,",mean.LL.reg2,") +- (",trunc(error.LL.reg2),",",trunc(error.LL.reg2),")")
+cat("(3,",mean.LL.reg3,") +- (",trunc(error.LL.reg3),",",trunc(error.LL.reg3),")")
+cat("(4,",mean.LL.reg4,") +- (",trunc(error.LL.reg4),",",trunc(error.LL.reg4),")")
+cat("(5,",mean.LL.reg5,") +- (",trunc(error.LL.reg5),",",trunc(error.LL.reg5),")")
+cat("(6,",mean.LL.reg6,") +- (",trunc(error.LL.reg6),",",trunc(error.LL.reg6),")")            
+cat("(7,",mean.LL.reg7,") +- (",trunc(error.LL.reg7),",",trunc(error.LL.reg7),")")               
+cat("};
+    \\addplot[
+    mark=*,
+    densely dotted,
+    error bars/.cd,
+    error bar style={color=black},
+    y dir=both,
+    y explicit
+    ] 
+    coordinates {") 			 
+cat("(1,",mean.LH.reg1,") +- (",trunc(error.LH.reg1),",",trunc(error.LH.reg1),")")
+cat("(2,",mean.LH.reg2,") +- (",trunc(error.LH.reg2),",",trunc(error.LH.reg2),")")
+cat("(3,",mean.LH.reg3,") +- (",trunc(error.LH.reg3),",",trunc(error.LH.reg3),")")
+cat("(4,",mean.LH.reg4,") +- (",trunc(error.LH.reg4),",",trunc(error.LH.reg4),")")
+cat("(5,",mean.LH.reg5,") +- (",trunc(error.LH.reg5),",",trunc(error.LH.reg5),")")
+cat("(6,",mean.LH.reg6,") +- (",trunc(error.LH.reg6),",",trunc(error.LH.reg6),")")            
+cat("(7,",mean.LH.reg7,") +- (",trunc(error.LH.reg7),",",trunc(error.LH.reg7),")")               
+cat("};
+    \\addplot[
+    mark=triangle*,
+    dotted,
+    error bars/.cd,
+    error bar style={color=black},
+    y dir=both,
+    y explicit
+    ] 
+    coordinates {") 			 
+cat("(1,",mean.HL.reg1,") +- (",trunc(error.HL.reg1),",",trunc(error.HL.reg1),")")
+cat("(2,",mean.HL.reg2,") +- (",trunc(error.HL.reg2),",",trunc(error.HL.reg2),")")
+cat("(3,",mean.HL.reg3,") +- (",trunc(error.HL.reg3),",",trunc(error.HL.reg3),")")
+cat("(4,",mean.HL.reg4,") +- (",trunc(error.HL.reg4),",",trunc(error.HL.reg4),")")
+cat("(5,",mean.HL.reg5,") +- (",trunc(error.HL.reg5),",",trunc(error.HL.reg5),")")
+cat("(6,",mean.HL.reg6,") +- (",trunc(error.HL.reg6),",",trunc(error.HL.reg6),")")            
+cat("(7,",mean.HL.reg7,") +- (",trunc(error.HL.reg7),",",trunc(error.HL.reg7),")")               
+cat("};
+\\addplot[
+		mark=square*,
+		dashed,
+		error bars/.cd,
+		error bar style={color=black},
+		y dir=both,
+		y explicit
+] ~/Work/R/LingExperiments/Soo/graph.pdf
+source('~/Work/R/LingExperiments/Soo/spr.R', chdir = TRUE)
+~/Work/R/LingExperiments/Soo/graph.tex
+	coordinates {") 			 
+cat("(1,",mean.HH.reg1,") +- (",trunc(error.HH.reg1),",",trunc(error.HH.reg1),")")
+cat("(2,",mean.HH.reg2,") +- (",trunc(error.HH.reg2),",",trunc(error.HH.reg2),")")
+cat("(3,",mean.HH.reg3,") +- (",trunc(error.HH.reg3),",",trunc(error.HH.reg3),")")
+cat("(4,",mean.HH.reg4,") +- (",trunc(error.HH.reg4),",",trunc(error.HH.reg4),")")
+cat("(5,",mean.HH.reg5,") +- (",trunc(error.HH.reg5),",",trunc(error.HH.reg5),")")
+cat("(6,",mean.HH.reg6,") +- (",trunc(error.HH.reg6),",",trunc(error.HH.reg6),")")            
+cat("(7,",mean.HH.reg7,") +- (",trunc(error.HH.reg7),",",trunc(error.HH.reg7),")")               
+cat("};
+\\legend{LL,LH,HL,HH}
+\\end{axis}
+\\end{tikzpicture}
+\\caption{Mean residual reading times for all sentence regions}
+\\end{figure}
+\\end{document}")
+sink()

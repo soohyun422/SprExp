@@ -1,3 +1,21 @@
+Skip to content
+
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+@soohyun422
+Sign out
+1
+1 0 soohyun422/SprExp Private
+Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
+SprExp/Spr2.R
+4a5a642  13 days ago
+@soohyun422 soohyun422 Add files via upload
+
+889 lines (601 sloc)  22.6 KB
 rm(list=ls())
 library(languageR)
 library(lme4)
@@ -5,7 +23,7 @@ library(lmerTest)
 library(psych)
 library(stringr)
 library(ggplot2)
-
+library(grid)
 
 ####
 #### Read dataset
@@ -832,7 +850,11 @@ fit %>%
   ggplot()+
   aes(x=reorder(Patienthood,-ResRT), color = BigramF, group=BigramF, y = ResRT)+
   stat_summary(fun.y = mean, geom="line")+
-  labs(x = "Patienthood")
+  labs(x = "Thematic-fit",caption = '\nFigure 2. Interaction beween Thematic-fit and Frequency on region 6') + 
+  theme(plot.caption = element_text(hjust=0.5),
+        text = element_text(size = 20,family = "Times New Roman"),
+        )
+  
 
 detach(reg6)
 

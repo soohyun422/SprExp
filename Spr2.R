@@ -202,9 +202,9 @@ spr_clean[which(spr_clean$Condition=="LH"|spr_clean$Condition=="LL"),]$Patientho
 ####
 ###########################################################
 
-spr_clean["BigramF"] <- NA
-spr_clean[which(spr_clean$Condition=="HH"|spr_clean$Condition=="LH"),]$BigramF <- 'high'
-spr_clean[which(spr_clean$Condition=="HL"|spr_clean$Condition=="LL"),]$BigramF <- 'low'
+spr_clean["Dep_Freq"] <- NA
+spr_clean[which(spr_clean$Condition=="HH"|spr_clean$Condition=="LH"),]$Dep_Freq <- 'high'
+spr_clean[which(spr_clean$Condition=="HL"|spr_clean$Condition=="LL"),]$Dep_Freq <- 'low'
 
 
 
@@ -568,9 +568,9 @@ reg1$ResRT <- reg1$ReadingTime - (reg1$Length * reg1$LBeta) ## per participant c
 attach(reg1)
 lmer.reg1.Patienthood <- lmer(ResRT ~ Patienthood + (1|WorkerID) + (1|Item) + (1|List), data=reg1)
 summary(lmer.reg1.Patienthood)
-lmer.reg1.Frequency <- lmer(ResRT ~ BigramF + (1|WorkerID) + (1|Item) + (1|List), data=reg1)
+lmer.reg1.Frequency <- lmer(ResRT ~ Dep_Freq + (1|WorkerID) + (1|Item) + (1|List), data=reg1)
 summary(lmer.reg1.Frequency)
-lmer.reg1.Interaction <- lmer(ResRT ~ Patienthood*BigramF + (1|WorkerID) + (1|Item) + (1|List), data=reg1)
+lmer.reg1.Interaction <- lmer(ResRT ~ Patienthood*Dep_Freq + (1|WorkerID) + (1|Item) + (1|List), data=reg1)
 summary(lmer.reg1.Interaction)
 detach(reg1)
 
@@ -616,9 +616,9 @@ reg2$ResRT <- reg2$ReadingTime - (reg2$Length * reg2$LBeta) ## per participant c
 attach(reg2)
 lmer.reg2.Patienthood <- lmer(ResRT ~ Patienthood + (1|WorkerID) + (1|Item) + (1|List), data=reg2)
 summary(lmer.reg2.Patienthood)
-lmer.reg2.Frequency <- lmer(ResRT ~ BigramF + (1|WorkerID) + (1|Item) + (1|List), data=reg2)
+lmer.reg2.Frequency <- lmer(ResRT ~ Dep_Freq + (1|WorkerID) + (1|Item) + (1|List), data=reg2)
 summary(lmer.reg2.Frequency)
-lmer.reg2.Interaction <- lmer(ResRT ~ Patienthood*BigramF + (1|WorkerID) + (1|Item) + (1|List), data=reg2)
+lmer.reg2.Interaction <- lmer(ResRT ~ Patienthood*Dep_Freq + (1|WorkerID) + (1|Item) + (1|List), data=reg2)
 summary(lmer.reg2.Interaction)
 detach(reg2)
 
@@ -663,9 +663,9 @@ reg3$ResRT <- reg3$ReadingTime - (reg3$Length * reg3$LBeta) ## per participant c
 attach(reg3)
 lmer.reg3.Patienthood <- lmer(ResRT ~ Patienthood + (1|WorkerID) + (1|Item) + (1|List), data=reg3)
 summary(lmer.reg3.Patienthood)
-lmer.reg3.Frequency <- lmer(ResRT ~ BigramF + (1|WorkerID) + (1|Item) + (1|List), data=reg3)
+lmer.reg3.Frequency <- lmer(ResRT ~ Dep_Freq + (1|WorkerID) + (1|Item) + (1|List), data=reg3)
 summary(lmer.reg3.Frequency)
-lmer.reg3.Interaction <- lmer(ResRT ~ Patienthood*BigramF + (1|WorkerID) + (1|Item) + (1|List), data=reg3)
+lmer.reg3.Interaction <- lmer(ResRT ~ Patienthood*Dep_Freq + (1|WorkerID) + (1|Item) + (1|List), data=reg3)
 summary(lmer.reg3.Interaction)
 detach(reg3)
 
@@ -712,9 +712,9 @@ reg4$ResRT <- reg4$ReadingTime - (reg4$Length * reg4$LBeta) ## per participant c
 attach(reg4)
 lmer.reg4.Patienthood <- lmer(ResRT ~ Patienthood + (1|WorkerID) + (1|Item) + (1|List), data=reg4)
 summary(lmer.reg4.Patienthood)
-lmer.reg4.Frequency <- lmer(ResRT ~ BigramF + (1|WorkerID) + (1|Item) + (1|List), data=reg4)
+lmer.reg4.Frequency <- lmer(ResRT ~ Dep_Freq + (1|WorkerID) + (1|Item) + (1|List), data=reg4)
 summary(lmer.reg4.Frequency)
-lmer.reg4.Interaction <- lmer(ResRT ~ Patienthood*BigramF + (1|WorkerID) + (1|Item) + (1|List), data=reg4)
+lmer.reg4.Interaction <- lmer(ResRT ~ Patienthood*Dep_Freq + (1|WorkerID) + (1|Item) + (1|List), data=reg4)
 summary(lmer.reg4.Interaction)
 detach(reg4)
 
@@ -759,9 +759,9 @@ reg5$ResRT <- reg5$ReadingTime - (reg5$Length * reg5$LBeta) ## per participant c
 attach(reg5)
 lmer.reg5.Patienthood <- lmer(ResRT ~ Patienthood + (1|WorkerID) + (1|Item) + (1|List), data=reg5)
 summary(lmer.reg5.Patienthood)
-lmer.reg5.Frequency <- lmer(ResRT ~ BigramF + (1|WorkerID) + (1|Item) + (1|List), data=reg5)
+lmer.reg5.Frequency <- lmer(ResRT ~ Dep_Freq + (1|WorkerID) + (1|Item) + (1|List), data=reg5)
 summary(lmer.reg5.Frequency)
-lmer.reg5.Interaction <- lmer(ResRT ~ Patienthood*BigramF + (1|WorkerID) + (1|Item) + (1|List), data=reg5)
+lmer.reg5.Interaction <- lmer(ResRT ~ Patienthood*Dep_Freq + (1|WorkerID) + (1|Item) + (1|List), data=reg5)
 summary(lmer.reg5.Interaction)
 detach(reg5)
 
@@ -808,9 +808,9 @@ reg6$ResRT <- reg6$ReadingTime - (reg6$Length * reg6$LBeta) ## per participant c
 attach(reg6)
 lmer.reg6.Patienthood <- lmer(ResRT ~ Patienthood + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
 summary(lmer.reg6.Patienthood)
-lmer.reg6.Frequency <- lmer(ResRT ~ BigramF + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
+lmer.reg6.Frequency <- lmer(ResRT ~ Dep_Freq + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
 summary(lmer.reg6.Frequency)
-lmer.reg6.Interaction <- lmer(ResRT ~ Patienthood*BigramF + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
+lmer.reg6.Interaction <- lmer(ResRT ~ Patienthood*Dep_Freq + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
 summary(lmer.reg6.Interaction)
 
 
@@ -827,18 +827,28 @@ summary(lmer.reg6.Interaction)
 ####
 ###########################################################
 
-fit<-lm(ResRT~Patienthood*BigramF,data=reg6)
+fit<-lm(ResRT~Patienthood*Dep_Freq,data=reg6)
+
 fit %>%
   ggplot()+
-  aes(x=reorder(Patienthood,-ResRT),linetype = BigramF,group=BigramF,y = ResRT)+
-  stat_summary(fun.y = mean, geom="line",size =1 )+
+  aes(x=reorder(Patienthood,-ResRT) ,linetype = Dep_Freq, group=Dep_Freq, y = ResRT)+
+  stat_summary(fun.y = mean, geom="line")+
   labs(x = "Thematic-fit",caption = '\nFigure 2: Interaction beween Thematic-fit and Frequency on region 6') + 
   theme_bw()+
   theme(plot.caption = element_text(hjust=0.5),
         text = element_text(size = 14,family = "Times New Roman")
   )
 
-  
+fit %>%
+  ggplot()+
+  aes(x=reorder(Patienthood,-ResRT),linetype = Dep_Freq,group=Dep_Freq,y = ResRT)+
+  stat_summary(fun.y = mean, geom="line",size =1 )+
+  labs(x = "Thematic-fit",caption = '\nFigure 2: Interaction beween Thematic-fit and Frequency on region 6') + 
+  theme_bw()+
+  theme(plot.caption = element_text(hjust=0.5),
+        text = element_text(,family = "Times New Roman")
+  )
+
 
 detach(reg6)
 
@@ -880,9 +890,9 @@ reg7$ResRT <- reg7$ReadingTime - (reg7$Length * reg7$LBeta) ## per participant c
 attach(reg7)
 lmer.reg7.Patienthood <- lmer(ResRT ~ Patienthood + (1|WorkerID) + (1|Item) + (1|List), data=reg7)
 summary(lmer.reg7.Patienthood)
-lmer.reg7.Frequency <- lmer(ResRT ~ BigramF + (1|WorkerID) + (1|Item) + (1|List), data=reg7)
+lmer.reg7.Frequency <- lmer(ResRT ~ Dep_Freq + (1|WorkerID) + (1|Item) + (1|List), data=reg7)
 summary(lmer.reg7.Frequency)
-lmer.reg7.Interaction <- lmer(ResRT ~ Patienthood*BigramF + (1|WorkerID) + (1|Item) + (1|List), data=reg7)
+lmer.reg7.Interaction <- lmer(ResRT ~ Patienthood*Dep_Freq + (1|WorkerID) + (1|Item) + (1|List), data=reg7)
 summary(lmer.reg7.Interaction)
 detach(reg7)
 

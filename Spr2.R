@@ -828,15 +828,14 @@ summary(lmer.reg6.Interaction)
 ###########################################################
 
 fit<-lm(ResRT~Patienthood*BigramF,data=reg6)
-
 fit %>%
   ggplot()+
-  aes(x=reorder(Patienthood,-ResRT), linetype = BigramF, group=BigramF, y = ResRT)+
-  stat_summary(fun.y = mean, geom="line")+
-  labs(x = "Thematic-fit",caption = '\nFigure 2. Interaction beween Thematic-fit and Frequency on region 6') + 
+  aes(x=reorder(Patienthood,-ResRT),linetype = BigramF,group=BigramF,y = ResRT)+
+  stat_summary(fun.y = mean, geom="line",size =1 )+
+  labs(x = "Thematic-fit",caption = '\nFigure 2: Interaction beween Thematic-fit and Frequency on region 6') + 
   theme_bw()+
   theme(plot.caption = element_text(hjust=0.5),
-        text = element_text(size = 14,family = "Times New Roman"),
+        text = element_text(size = 14,family = "Times New Roman")
   )
 
   

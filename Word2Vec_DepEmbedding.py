@@ -6,6 +6,8 @@ import gensim
 import pandas as pd
 import math
 
+
+#Function for cosine similarity
 def cosine_similarity(v1,v2):
        sumxx, sumxy, sumyy = 0,0,0
        for i in range(len(v1)):
@@ -15,10 +17,10 @@ def cosine_similarity(v1,v2):
               sumxy += x*y
        return sumxy/math.sqrt(sumxx*sumyy)
 
-#Word2vec
+#Word2vec model
 model = gensim.models.KeyedVectors.load_word2vec_format('GoogleNews-vectors-negative300.bin', binary=True)  
 
-#Dependency-based Word Embeddings
+#Dependency-based Word Embeddings data
 contexts = open('deps.contexts','r').readlines()
 words = open('deps.words','r').readlines()
 
@@ -30,11 +32,12 @@ data2 = open('Datasheet2.txt','w')
 data2.write('sent\tverb\tobj\tType\tPatienthood\tBigramF\tW_Freq\tlogWFreq\tDepEmbedding\tWord2Vec\n')
 
 
+
+# Build dictionaries that map words to dependency embeddings
 verbset = dict()
 objset = dict()
 
-                    
-
+                   
 for i in data:
        verb = i.split('\t')[1]
        verbset[verb]=None
@@ -54,7 +57,12 @@ for i in contexts:
               objset[i.split(' ')[0].replace('dobj_','')]= [float(k) for k in i.split(' ')[1:]]
 
 
-
+              
+              
+              
+              
+              
+#Write another datasheet including word similarities calculated with Word2Vec and Dependency Embeddings              
 for i in data:
        verb = i.split('\t')[1]
        obj = i.split('\t')[2]

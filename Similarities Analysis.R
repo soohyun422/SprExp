@@ -617,14 +617,23 @@ reg6$ResRT <- reg6$ReadingTime - (reg6$Length * reg6$LBeta) ## per participant c
 
 
 attach(reg6)
-lmer.reg6.BigramF <- lmer(ResRT ~ BigramF + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
+lmer.reg6.BigramF <- lmer(ResRT ~ (BigramF+1)+Patienthood + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
 summary(lmer.reg6.BigramF)
 
-lmer.reg6.DepEmbedding <- lmer(ResRT ~ DepEmbedding + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
+lmer.reg6.DepEmbedding <- lmer(ResRT ~ DepEmbedding+Patienthood + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
 summary(lmer.reg6.DepEmbedding)
 
-lmer.reg6.Word2Vec <- lmer(ResRT ~ Word2Vec + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
+lmer.reg6.Word2Vec <- lmer(ResRT ~ Word2Vec+Patienthood + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
 summary(lmer.reg6.Word2Vec)
+
+lmer.reg6.BigramF2 <- lmer(ResRT ~ (BigramF+1)*Patienthood + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
+summary(lmer.reg6.BigramF2)
+
+lmer.reg6.DepEmbedding2 <- lmer(ResRT ~ DepEmbedding*Patienthood + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
+summary(lmer.reg6.DepEmbedding2)
+
+lmer.reg6.Word2Vec2 <- lmer(ResRT ~ Word2Vec*Patienthood + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
+summary(lmer.reg6.Word2Vec2)
 
 detach(reg6)
 
@@ -670,14 +679,23 @@ reg7$ResRT <- reg7$ReadingTime - (reg7$Length * reg7$LBeta) ## per participant c
 
 
 attach(reg7)
-lmer.reg7.BigramF <- lmer(ResRT ~ BigramF + (1|WorkerID) + (1|Item) + (1|List), data=reg7)
+lmer.reg7.BigramF <- lmer(ResRT ~ BigramF+Patienthood + (1|WorkerID) + (1|Item) + (1|List), data=reg7)
 summary(lmer.reg7.BigramF)
 
-lmer.reg7.DepEmbedding <- lmer(ResRT ~ DepEmbedding + (1|WorkerID) + (1|Item) + (1|List), data=reg7)
+lmer.reg7.DepEmbedding <- lmer(ResRT ~ DepEmbedding+Patienthood + (1|WorkerID) + (1|Item) + (1|List), data=reg7)
 summary(lmer.reg7.DepEmbedding)
 
-lmer.reg7.Word2Vec <- lmer(ResRT ~ Word2Vec + (1|WorkerID) + (1|Item) + (1|List), data=reg7)
+lmer.reg7.Word2Vec <- lmer(ResRT ~ Word2Vec+Patienthood + (1|WorkerID) + (1|Item) + (1|List), data=reg7)
 summary(lmer.reg7.Word2Vec)
+
+lmer.reg7.BigramF2 <- lmer(ResRT ~ BigramF*Patienthood + (1|WorkerID) + (1|Item) + (1|List), data=reg7)
+summary(lmer.reg7.BigramF2)
+
+lmer.reg7.DepEmbedding2 <- lmer(ResRT ~ DepEmbedding*Patienthood + (1|WorkerID) + (1|Item) + (1|List), data=reg7)
+summary(lmer.reg7.DepEmbedding2)
+
+lmer.reg7.Word2Vec2 <- lmer(ResRT ~ Word2Vec*Patienthood + (1|WorkerID) + (1|Item) + (1|List), data=reg7)
+summary(lmer.reg7.Word2Vec2)
 
 detach(reg7)
 
@@ -687,3 +705,26 @@ detach(reg7)
 ##### End LMER
 #####
 #####
+
+
+
+
+
+###########################################################
+####
+####  Correlations 
+####
+###########################################################
+
+
+
+cor.test(data$Patienthood, data$Word2Vec)
+data2<-data[which(data$DepEmbedding!="None"),]
+cor.test(data2$Patienthood,as.double(paste(data2$DepEmbedding)))
+
+
+
+####  Plot
+lm<-lm(Patienthood~as.double(paste(DepEmbedding)),data=data2)
+plot(Patienthood~as.double(paste(DepEmbedding)),data=data2)
+abline(lm)

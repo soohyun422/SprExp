@@ -620,10 +620,10 @@ attach(reg6)
 lmer.reg6.BigramF <- lmer(ResRT ~ BigramF + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
 summary(lmer.reg6.BigramF)
 
-lmer.reg6.DepEmbedding <- lmer(ResRT ~ exp(DepEmbedding) + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
+lmer.reg6.DepEmbedding <- lmer(ResRT ~ DepEmbedding + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
 summary(lmer.reg6.DepEmbedding)
 
-lmer.reg6.Word2Vec <- lmer(ResRT ~ exp(Word2Vec) + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
+lmer.reg6.Word2Vec <- lmer(ResRT ~ Word2Vec + (1|WorkerID) + (1|Item) + (1|List), data=reg6)
 summary(lmer.reg6.Word2Vec)
 
 detach(reg6)

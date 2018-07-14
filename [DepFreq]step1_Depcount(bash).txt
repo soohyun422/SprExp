@@ -1,0 +1,6 @@
+[bashcode]
+#take roots, quadarcs, frequencied from quadarc files 
+egrep -o '[[:alpha:]]+      [^      ]+      [0-9]+' quadarcs.* > Depcount.txt	
+
+# remove file name from Depcount.txt
+sed 's/quadarcs.[0-9]*-of-99://g' < Depcount.txt > Depcount2.txt
